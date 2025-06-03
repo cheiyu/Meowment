@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>領養表單</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/banner footer.css">
+    <style>
+        .banner-background .title {
+            font-size: 2rem;
+            color: black;
+            word-spacing: 0.5rem;
+            position: absolute;
+            left: 45.5%;
+            top: 44%;
+        }
+
+        .form-section {
+            max-width: 720px;
+            margin: 3em auto;
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 1.5em;
+            background: #F7F2EC;
+            padding: 1em;
+            border-radius: 30px;
+            border: 2px dashed #AABCCD;
+            display: inline-block;
+        }
+
+        .form-group {
+            margin-bottom: 1em;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 10em;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #EFEFEF;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 1em;
+            margin-top: 0.5em;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+        }
+
+        .footer {
+            background-color: #D7D3BF;
+            padding: 2em;
+            text-align: center;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        .footer-container {
+            position: relative;
+            background-color: #D7D3BF;
+            width: 100%;
+            height: 100%;
+            max-width: 1440px;
+            padding-bottom: 2.5em;
+            margin-top: 1.5em;
+        }
+
+        .footer-container .logo {
+            position: absolute;
+            left: 5%;
+        }
+
+        .footer-txt {
+            display: flex;
+            justify-content: end;
+            gap: 2em;
+            padding-top: 1em;
+        }
+
+        .footer-copyright {
+            opacity: 50%;
+            font-size: 12px;
+            padding-left: 20em;
+            padding-top: 4em;
+        }
+        .form-container{
+            margin-left: 30em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="logo">
+            <a href="01-Index.html"><img src="img/logo.svg" alt="logo">
+        </div></a>
+        <nav class="header-content" id="nav-menu">
+            <div class="header-button">
+                <span><a href="02-aboutUs.html">關於我們</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="06-news.html">最新消息</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="03-dish.html">餐點目錄</a></span>
+            </div>
+
+            <div class="header-button-dropdown">
+                <span class="dropdown-toggle">帶喵回家</span>
+                <ul class="dropdown-menu">
+                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+                </ul>
+            </div>
+            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+
+        </nav>
+    </div>
+
+    <div class="banner-background">
+        <div class="banner-img">
+            <img src="img/banner_background.svg" alt="backgroundImg">
+        </div>
+        <div class="title">
+            <span>領養表單</span>
+        </div>
+    </div>
+    <div class="form-container">
+    <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" id="name">
+    </div>
+    <div class="form-group">
+        <label for="phone">電話</label>
+        <input type="text" id="phone">
+    </div>
+    <div class="form-group">
+        <label for="email">電子郵件</label>
+        <input type="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="catname">想領養的貓咪</label>
+        <input type="text" id="catname">
+    </div>
+    <div class="form-group">
+        <label>是否租屋</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> 是</label>
+            <label>附上房東同意書<input type="file"></label>
+            <label><input type="checkbox"> 否</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>家中環境照片</label>
+        <div class="checkbox-group">
+            <label><input type="file"></label>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label>家中是否有其他寵物</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> 是</label>
+            <label>飼養物種 <input type="text"> </label>
+            <label><input type="checkbox"> 否</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label><input type="checkbox"> 已詳閱<a href="04-1-meow-preparation.html" target="_blank">領養須知</a></label>
+    </div>
+    <div class="confirm">
+        <label><button type="submit">送出</button></label>
+    </div>
+    </section>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <div class="footer-txt">
+                <span>常見問題</span>
+                <span>聯絡我們</span>
+                <span>隱私權政策</span>
+                <span>使用者條款</span>
+            </div>
+            <div class="footer-icon">
+
+            </div>
+            <div class="footer-copyright">
+                <span> Copyright © 2025</span>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

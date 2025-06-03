@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>領養須知範例</title>
+    <style>
+        /* 全站共用 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FFF9F0;
+            color: #5A5A5A;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 64px 48px;
+        }
+
+        .section {
+            margin-bottom: 64px;
+        }
+
+        /* 區塊標題 */
+        .section-header {
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 24px;
+            background-color: #FFF9F0;
+            border: 2px dashed #CFE7FF;
+            font-size: 24px;
+            font-weight: 600;
+            color: #7A7A7A;
+        }
+
+        /* A. 領養前準備 */
+        .prep-items {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 32px;
+        }
+
+        .prep-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+        }
+
+        .prep-item .icon {
+            width: 60px;
+            height: 60px;
+            background-color: #CFE7FF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .prep-item .text {
+            margin-top: 12px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* B. 必備物資清單 */
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .resource-card {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .resource-card:nth-child(odd) {
+            background-color: #FAF0D7;
+        }
+
+        .resource-card:nth-child(even) {
+            background-color: #FFF9F0;
+        }
+
+        .resource-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #D9F2E1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .resource-text {
+            margin-left: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* C. 日常規範與照顧 */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+            margin-top: 32px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: repeating-linear-gradient(to bottom,
+                    #E0E0E0,
+                    #E0E0E0 2px,
+                    transparent 2px,
+                    transparent 4px);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background-color: #FFF9F0;
+            border: 2px solid #CFE7FF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #5A5A5A;
+        }
+
+        .timeline-content {
+            margin-left: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- A. 領養前準備 -->
+        <section class="section">
+            <div class="section-header">A. 領養前準備</div>
+            <div class="prep-items">
+                <div class="prep-item">
+                    <div class="icon">🏠</div>
+                    <div class="text">足夠空間</div>
+                </div>
+                <div class="prep-item">
+                    <div class="icon">🛡️</div>
+                    <div class="text">居家安全防護</div>
+                </div>
+                <div class="prep-item">
+                    <div class="icon">❤️</div>
+                    <div class="text">陪伴他一輩子的心</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- B. 必備物資清單 -->
+        <section class="section">
+            <div class="section-header">B. 必備物資清單</div>
+            <div class="resource-list">
+                <div class="resource-card">
+                    <div class="resource-icon">🐾</div>
+                    <div class="resource-text">貓砂盆 ＆ 貓砂</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🍽️</div>
+                    <div class="resource-text">碗 ＆ 食物／水</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🧸</div>
+                    <div class="resource-text">玩具</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🛏️</div>
+                    <div class="resource-text">毛毯</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">✂️</div>
+                    <div class="resource-text">指甲剪／毛梳</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🪵</div>
+                    <div class="resource-text">貓抓板</div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🏰</div>
+                    <div class="resource-text">貓跳台</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C. 日常規範與照顧 -->
+        <section class="section">
+            <div class="section-header">C. 日常規範與照顧</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">✂️</div>
+                    <div class="timeline-content">絕育</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">💉</div>
+                    <div class="timeline-content">晶片植入與身分登記</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🩺</div>
+                    <div class="timeline-content">定期健康檢查</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🐛</div>
+                    <div class="timeline-content">驅蟲與預防針</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🥣</div>
+                    <div class="timeline-content">飲食管理</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🤸‍♀️</div>
+                    <div class="timeline-content">互動與運動</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>領養須知</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/banner footer.css">
+    <style>
+        .section {
+            margin: 2em auto;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 1em;
+        }
+
+        .section-head .section-title {
+            /* background-color: #D7E2E8; */
+            display: inline-block;
+            padding: 0.5em 1em;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 0;
+            font-size: 20px;
+            white-space: nowrap;
+        }
+
+        .section-head .intro-text {
+            font-size: 16px;
+            margin: 0;
+            flex: 1;
+            padding-left: 1em;
+            color: #899CB2;
+        }
+
+        .section-title {
+            /* background-color: #D7E2E8; */
+            display: inline-block;
+            padding: 0.5em 1em;
+            /* border-radius: 20px; */
+            font-weight: bold;
+            margin-bottom: 1em;
+            font-size: 20px;
+        }
+
+        .intro-text {
+            margin: 1em 0;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .photo-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+            margin-bottom: 2em;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            flex: 1;
+            opacity: 90%;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .photo-item img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            opacity: 90%;
+            transition: 0.3s ease;
+        }
+
+        .photo-item::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.8em;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .photo-item:hover::after {
+            opacity: 1;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .grid-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+        .grid-item {
+            background-color: #EAEAEA;
+            padding: 0.8em 1.2em;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .icon-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+            margin: 1.5em 0;
+            font-size: 14px;
+        }
+
+        .carousel {
+            margin: 3em auto;
+            background-color: #D7E2E8;
+            padding: 2em;
+            border-radius: 20px;
+            max-width: 600px;
+            position: relative;
+            text-align: center;
+        }
+
+        .carousel .step-icon {
+            font-size: 24px;
+            margin-bottom: 0.5em;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .carousel button.left {
+            left: -1em;
+        }
+
+        .carousel button.right {
+            right: -1em;
+        }
+
+        .banner-background .title {
+            font-size: 2rem;
+            color: black;
+            word-spacing: 0.5rem;
+            position: absolute;
+            left: 45.5%;
+            top: 45%;
+        }
+
+        .footer-container {
+            position: relative;
+            background-color: #D7D3BF;
+            width: 100%;
+            height: 100%;
+            max-width: 1440px;
+            padding-bottom: 2.5em;
+            margin-top: 1.5em;
+        }
+
+        .footer-container .logo {
+            position: absolute;
+            left: 5%;
+        }
+
+        .footer-txt {
+            display: flex;
+            justify-content: end;
+            gap: 2em;
+            padding-top: 1em;
+        }
+
+        .footer-copyright {
+            opacity: 50%;
+            font-size: 12px;
+            padding-left: 20em;
+            padding-top: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="logo">
+            <a href="01-Index.html"><img src="img/logo.svg" alt="logo">
+        </div></a>
+        <nav class="header-content" id="nav-menu">
+            <div class="header-button">
+                <span><a href="02-aboutUs.html">關於我們</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="06-news.html">最新消息</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="03-dish.html">餐點目錄</a></span>
+            </div>
+
+            <div class="header-button-dropdown">
+                <span class="dropdown-toggle">帶喵回家</span>
+                <ul class="dropdown-menu">
+                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+                </ul>
+            </div>
+            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+
+        </nav>
+    </div>
+
+    <div class="banner-background">
+        <div class="banner-img">
+            <img src="img/banner_background.svg" alt="backgroundImg">
+        </div>
+        <div class="title">
+            <span>領養須知</span>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-head">
+            <div class="section-title">領養準備</div>
+            <p class="intro-text">在迎接新家人前，請先確認以下準備與規劃，讓牠擁有幸福的第二人生</p>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-item" data-label="足夠空間">
+                <img src="img/preparation_room.svg" alt="足夠空間">
+            </div>
+            <div class="photo-item" data-label="安全防護">
+                <img src="img/preparation_prevent.svg" alt="安全防護">
+            </div>
+            <div class="photo-item" data-label="陪伴的心">
+                <img src="img/preparation_cat.svg" alt="陪伴的心">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">必備物資清單</div>
+        <div class="grid-box">
+            <div class="grid-item">貓砂盆＆貓砂</div>
+            <div class="grid-item">貓飼料</div>
+            <div class="grid-item">貓碗＆飲水器</div>
+            <div class="grid-item">貓抓板</div>
+            <div class="grid-item">玩具</div>
+            <div class="grid-item">梳毛器</div>
+            <div class="grid-item">貓籠/提籠</div>
+            <div class="grid-item">工具</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">日常照顧規劃</div>
+        <div class="icon-grid">
+            <div>絕育 / 結紮</div>
+            <div>疫苗與驅蟲針</div>
+            <div>貓咪個資登錄</div>
+            <div>飲食管理</div>
+            <div>互動與陪伴</div>
+            <div>定期健康檢查</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">領養流程</div>
+        <div class="carousel">
+            <button class="left">&#8249;</button>
+            <div class="step-icon">🐾
+            </div>
+            <h3>STEP 1：初見</h3>
+            <p>先到咖啡廳，與貓咪互動，確認彼此性格</p>
+            <button class="right">&#8250;</button>
+        </div>
+    </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <div class="footer-txt">
+                <span>常見問題</span>
+                <span>聯絡我們</span>
+                <span>隱私權政策</span>
+                <span>使用者條款</span>
+            </div>
+            <div class="footer-icon">
+
+            </div>
+            <div class="footer-copyright">
+                <span> Copyright © 2025</span>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>預約</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/banner footer.css" />
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        .banner-background .title {
+            font-size: 2rem;
+            color: black;
+            word-spacing: 0.5rem;
+            position: absolute;
+            left: 48%;
+            top: 45%;
+        }
+
+        .form-container {
+            max-width: 720px;
+            margin: 3em auto;
+            background-color: #e3e1de;
+            padding: 2em;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 2em;
+            background: #f7f2ec;
+            padding: 1em;
+            border-radius: 30px;
+            border: 2px dashed #aabccd;
+            display: inline-block;
+        }
+
+        .calendar-placeholder {
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            padding: 1em;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .calendar-placeholder img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 0.7em;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: #efefef;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1em;
+            background-color: #a59d84;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 2em;
+        }
+
+
+        .footer-container {
+            position: relative;
+            background-color: #d7d3bf;
+            width: 100%;
+            max-width: 1440px;
+            padding-bottom: 2.5em;
+            margin-top: 1.5em;
+        }
+
+        .footer-container .logo {
+            position: absolute;
+            left: 5%;
+        }
+
+        .footer-txt {
+            display: flex;
+            justify-content: end;
+            gap: 2em;
+            padding-top: 1em;
+        }
+
+        .footer-copyright {
+            opacity: 50%;
+            font-size: 12px;
+            padding-left: 20em;
+            padding-top: 4em;
+        }
+    </style>
+</head>
+
+<body>
+     <div class="header">
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+       <div class="logo">
+            <a href="01-Index.html"><img src="img/logo.svg" alt="logo">
+        </div></a>
+        <nav class="header-content" id="nav-menu">
+            <div class="header-button">
+                <span><a href="02-aboutUs.html">關於我們</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="06-news.html">最新消息</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="03-dish.html">餐點目錄</a></span>
+            </div>
+
+            <div class="header-button-dropdown">
+                <span class="dropdown-toggle">帶喵回家</span>
+                <ul class="dropdown-menu">
+                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+                </ul>
+            </div>
+            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+
+        </nav>
+    </div>
+    <div class="banner-background">
+        <div class="banner-img">
+            <img src="img/banner_background.svg" alt="backgroundImg" />
+        </div>
+        <div class="title">
+            <span>預約</span>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>線上預約表單</h2>
+
+        <div class="calendar-placeholder">
+            <img src="img/calendar.svg" alt="calendar" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" />
+        </div>
+
+        <div class="form-group">
+            <label for="phone">電話</label>
+            <input type="text" id="phone" />
+        </div>
+
+        <div class="form-group">
+            <label for="people">人數</label>
+            <select id="people">
+                <option value="">請選擇</option>
+                <option value="1">1人</option>
+                <option value="2">2人</option>
+                <option value="3">3人</option>
+                <option value="4">4人以上</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="time">時間</label>
+            <select id="time">
+                <option value="">請選擇</option>
+                <option>11:00</option>
+                <option>13:00</option>
+                <option>15:00</option>
+                <option>17:00</option>
+            </select>
+        </div>
+
+        <button class="submit-btn">送出預約</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo" />
+            </div>
+            <div class="footer-txt">
+                <span>常見問題</span>
+                <span>聯絡我們</span>
+                <span>隱私權政策</span>
+                <span>使用者條款</span>
+            </div>
+            <div class="footer-copyright">
+                <span> Copyright © 2025</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

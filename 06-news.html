@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/banner footer.css">
+    <style>
+        .news-cardlist {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+
+            padding: 0.5em 0;
+
+
+        }
+
+        .news-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 1.5em;
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+
+        }
+
+        .news-cat-img {
+            position: relative;
+            width: 360px;
+            height: 290px;
+            flex-shrink: 0;
+
+        }
+
+        .news-cat-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .news-label {
+            width: 65%;
+            padding: 0.5em 1em;
+            background-color: #D9D9D9;
+            position: absolute;
+            bottom: 30px;
+            right: -25px;
+            border-radius: 10px;
+            z-index: 100;
+            font-size: 12px;
+            text-align: center;
+            opacity: 90%;
+
+        }
+
+        .news-cat-img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            border-top: 4px dashed #BCCCDC;
+            border-right: 4px dashed #BCCCDC;
+            border-bottom: none;
+            border-left: none;
+            border-top-right-radius: 15px;
+            transform: translate(10px, -10px);
+
+        }
+
+        .news-cat-img::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            border-left: 4px dashed #BCCCDC;
+            border-bottom: 4px dashed #BCCCDC;
+            border-top: none;
+            border-right: none;
+            border-bottom-left-radius: 15px;
+            transform: translate(-10px, 10px);
+        }
+
+        .news-txtcontainer {
+            width: 100%;
+            background-color: #D9D9D9;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1em 1.5em;
+            border-radius: 30px;
+
+        }
+
+        .news-txt {
+            border-bottom: 1px solid #333;
+
+            padding: 1.5em 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1em;
+
+        }
+
+        .news-txt span {
+            display: inline-block;
+        }
+
+        .news-date {
+            width: 120px;
+            text-align: left;
+        }
+
+        .news-category {
+            width: 100px;
+            text-align: left;
+            color: #A55C2A;
+            font-weight: bold;
+        }
+
+        .news-category-title {
+            flex: 1;
+            text-align: left;
+        }
+
+        .more-btn {
+            text-align: right;
+            width: 100%;
+            display: block;
+            padding: 1em 0;
+            font-weight: bold;
+            border: none;
+            background: none;
+        }
+
+        .banner-background .title {
+            font-size: 2rem;
+            color: black;
+            word-spacing: 0.5rem;
+            position: absolute;
+            left: 45.5%;
+            top: 44%;
+        }
+
+        .footer-container {
+            position: relative;
+            background-color: #D7D3BF;
+            width: 100%;
+            height: 100%;
+            max-width: 1440px;
+            padding-bottom: 2.5em;
+            margin-top: 1.5em;
+        }
+
+        .footer-container .logo {
+            position: absolute;
+            left: 5%;
+        }
+
+        .footer-txt {
+            display: flex;
+            justify-content: end;
+            gap: 2em;
+            padding-top: 1em;
+        }
+
+        .footer-copyright {
+            opacity: 50%;
+            font-size: 12px;
+            padding-left: 20em;
+            padding-top: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="logo">
+            <a href="01-Index.html"><img src="img/logo.svg" alt="logo">
+        </div></a>
+        <nav class="header-content" id="nav-menu">
+            <div class="header-button">
+                <span><a href="02-aboutUs.html">關於我們</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="06-news.html">最新消息</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="03-dish.html">餐點目錄</a></span>
+            </div>
+
+            <div class="header-button-dropdown">
+                <span class="dropdown-toggle">帶喵回家</span>
+                <ul class="dropdown-menu">
+                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+                </ul>
+            </div>
+            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+
+        </nav>
+    </div>
+
+    <div class="banner-background">
+        <div class="banner-img">
+            <img src="img/banner_background.svg" alt="backgroundImg">
+        </div>
+        <div class="title">
+            <span>最新消息</span>
+        </div>
+    </div>
+
+        <div class="news-cardlist">
+            <div class="news-card">
+                <div class="news-cat-img">
+                    <img src="/img/news_cat_quan.svg" alt="cat">
+                    <div class="news-label">
+                        <span>叮咚～我是今天最幸福的圈圈，找到家囉！</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="news-card">
+                <div class="news-cat-img">
+                    <img src="/img/news_cat_meatball.svg" alt="cat">
+                    <div class="news-label">
+                        <span> 本喵已升級：喵啡肉丸 ➜ 屋內撒嬌鬼！</span>
+                    </div>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-cat-img">
+                    <img src="/img/news_cat_wanglai.svg" alt="cat">
+                    <div class="news-label">
+                        <span>旺萊被領養啦！開心出發～</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-txtcontainer">
+            <button class="more-btn">More</button>
+            <div class="news-txt">
+                <span class="news-date">2025/5/18</span>
+                <span class="news-category">最新活動</span>
+                <span class="news-category-title">貓貓的下午茶日記</span> <br>
+            </div>
+            <div class="news-txt">
+                <span class="news-date">2025/5/10</span>
+                <span class="news-category">新家報到</span>
+                <span class="news-category-title">圈圈找到家囉！開心啟程去幸福</span><br>
+            </div>
+            <div class="news-txt">
+                <span class="news-date">2025/5/8</span>
+                <span class="news-category">最新活動</span>
+                <span class="news-category-title">認養幸福季・送你一份溫暖</span><br>
+            </div>
+            <div class="news-txt">
+                <span class="news-date">2025/5/5</span>
+                <span class="news-category">新家報到</span>
+                <span class="news-category-title">豆漿被領養啦！準備展開新貓生</span><br>
+            </div>
+            <div class="news-txt">
+                <span class="news-date">2025/4/30</span>
+                <span class="news-category">新家報到</span>
+                <span class="news-category-title">貓星人寫真月・票選你最愛的貓臉！</span><br>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    </div>
+    
+</body>
+<footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <div class="footer-txt">
+                <span>常見問題</span>
+                <span>聯絡我們</span>
+                <span>隱私權政策</span>
+                <span>使用者條款</span>
+            </div>
+            <div class="footer-icon">
+
+            </div>
+            <div class="footer-copyright">
+                <span> Copyright © 2025</span>
+            </div>
+
+        </div>
+
+    </footer>
+
+</html>

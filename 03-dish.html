@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>餐點目錄</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/banner footer.css" />
+    <style>
+        .menu {
+            background-color: #F9F8F4;
+            padding: 4em 2em;
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        .menu-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 2em;
+        }
+
+        .menu-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 5em;
+            gap: 3em;
+            flex-wrap: wrap;
+        }
+
+        .menu-img {
+            width: 360px;
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .menu-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .menu-content h3 {
+            font-size: 24px;
+            margin-bottom: 1em;
+        }
+
+        .menu-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .menu-content li {
+            margin-bottom: 2em;
+            font-size: 16px;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .item-text {
+            padding-right: 6em;
+        }
+
+        .item-price {
+            text-align: right;
+            font-weight: bold;
+            color: #333;
+            margin-top: 0.3em;
+        }
+
+        .banner-background .title {
+            font-size: 2rem;
+            color: black;
+            word-spacing: 0.5rem;
+            position: absolute;
+            left: 45.5%;
+            top: 44%;
+        }
+
+        .footer-container {
+            position: relative;
+            background-color: #D7D3BF;
+            width: 100%;
+            max-width: 1440px;
+            padding-bottom: 2.5em;
+            margin-top: 1.5em;
+        }
+
+        .footer-container .logo {
+            position: absolute;
+            left: 5%;
+        }
+
+        .footer-txt {
+            display: flex;
+            justify-content: end;
+            gap: 2em;
+            padding-top: 1em;
+        }
+
+        .footer-copyright {
+            opacity: 50%;
+            font-size: 12px;
+            padding-left: 20em;
+            padding-top: 4em;
+        }
+
+        .menu-section reverse {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="logo">
+            <a href="01-Index.html"><img src="img/logo.svg" alt="logo">
+        </div></a>
+        <nav class="header-content" id="nav-menu">
+            <div class="header-button">
+                <span><a href="02-aboutUs.html">關於我們</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="06-news.html">最新消息</a></span>
+            </div>
+            <div class="header-button">
+                <span><a href="03-dish.html">餐點目錄</a></span>
+            </div>
+            <div class="header-button-dropdown">
+                <span class="dropdown-toggle">帶喵回家</span>
+                <ul class="dropdown-menu">
+                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+                </ul>
+            </div>
+            <div class="header-button">
+                <span><a href="05-reservation.html">我要預約</a></span>
+            </div>
+        </nav>
+    </div>
+
+    <div class="banner-background">
+        <div class="banner-img">
+            <img src="img/banner_background.svg" alt="backgroundImg" />
+        </div>
+        <div class="title">
+            <span>餐點目錄</span>
+        </div>
+    </div>
+
+    
+    <div class="menu-section">
+        <img src="img/menu_drink.svg" alt="cat with coffee" class="menu-img" />
+        <div class="menu-content">
+            <h3>咖啡與飲品</h3>
+            <ul>
+                <li>
+                    <div class="item-text"><b>橘貓美式</b> O’Americano <br>採用中淺焙莊園豆＋柑橘風味，乾淨順口，微酸尾韻。</div>
+                    <div class="item-price">$120</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>肉球拿鐵</b> Paw Latte <br>醇厚牛奶與淺焙義式濃縮，溫暖每一口。</div>
+                    <div class="item-price">$160</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>喵啡卡布奇諾</b> Meowccino <br>綿密奶泡＋濃郁義式濃縮，輕輕灑上可可粉，滑順香濃。</div>
+                    <div class="item-price">$150</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>貓薄荷摩卡</b> Catnip Mocha <br>比利時巧克力＋義式濃縮＋薄荷香氣，甜而不膩。</div>
+                    <div class="item-price">$150</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>蜜香鮮奶</b> Honey Milk Latte <br>天然百花蜂蜜調入鮮奶與濃縮，香甜柔順，尾韻回甘。</div>
+                    <div class="item-price">$140</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="menu-section reverse">
+        <div class="menu-content">
+            <h3>甜點</h3>
+            <ul>
+                <li>
+                    <div class="item-text"><b>虎斑鬆餅</b> Tabby Waffle <br>外脆內鬆軟，淋上虎斑花紋巧克力醬與鮮奶油。</div>
+                    <div class="item-price">$180</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>貓草盆栽</b> Grassamisu <br>綿密鬆軟的提拉米蘇, 點綴新鮮薄荷香氣，口感層次豐富。</div>
+                    <div class="item-price">$150</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>貓咪布丁</b> Kitty Pudding <br>奶香滑嫩＋微焦焦糖層，口感柔順，甜而不膩。</div>
+                    <div class="item-price">$130</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>魚魚馬卡龍</b> Fish Macaron <br>酥脆外殼＋細緻杏仁餡，造型萌趣可愛。</div>
+                    <div class="item-price">$160</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>蜜桃塔</b> Peach Tart <br>酥脆塔皮＋鮮甜蜜桃片＋香草卡士達，清爽解膩。</div>
+                    <div class="item-price">$150</div>
+                </li>
+            </ul>
+        </div>
+        <img src="img/menu_waffle.svg" alt="cat with dessert" class="menu-img" />
+    </div>
+
+
+    <div class="menu-section">
+        <img src="img/menu_catdishes.svg" alt="cat eating food" class="menu-img" />
+        <div class="menu-content">
+            <h3>喵星人盛宴</h3>
+            <ul>
+                <li>
+                    <div class="item-text"><b>蔬菜拼盤</b> Veggie Platter <br>用心挑選＋低溫處理，包含綠花椰菜。</div>
+                    <div class="item-price">$110</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>鮪魚慕斯</b> Tuna Mousse <br>絲綢般滑順＋細緻魚香，特別人設宴。</div>
+                    <div class="item-price">$120</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>鮭魚小塔</b> Salmon Tartlet <br>混搭綿密薯泥與鮮魚為貓打造。</div>
+                    <div class="item-price">$140</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>雞肉什錦餐</b> Chicken Medley <br>平衡營養設計，溫和好消化，貓咪喜愛。</div>
+                    <div class="item-price">$130</div>
+                </li>
+                <li>
+                    <div class="item-text"><b>貓草優格</b> Catgrass Yogurt <br>天然香草＋輕乳優格，解膩消化，貓咪愛愛。</div>
+                    <div class="item-price">$115</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo" />
+            </div>
+            <div class="footer-txt">
+                <span>常見問題</span>
+                <span>聯絡我們</span>
+                <span>隱私權政策</span>
+                <span>使用者條款</span>
+            </div>
+            <div class="footer-copyright">
+                <span>Copyright © 2025</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

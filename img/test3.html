@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>雙主題菜單範例</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+            padding: 40px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 40px;
+        }
+
+        .column {
+            flex: 1;
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h2 {
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .earth h2 {
+            color: #2C3E50;
+        }
+
+        .meow h2 {
+            color: #1ABC9C;
+        }
+
+        .item {
+            margin-bottom: 16px;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .item-desc {
+            margin: 4px 0 0 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .item-price {
+            float: right;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <!-- 地球人盛宴 -->
+        <div class="column earth">
+            <h2>🌍 地球人盛宴 Earth Feast</h2>
+            <div class="item">
+                <span class="item-name">☕️ 經典拿鐵 Classic Latte</span>
+                <span class="item-price">150 TWD</span>
+                <div class="item-desc">醇厚牛奶與淺焙義式濃縮，溫暖每一口</div>
+            </div>
+            <div class="item">
+                <span class="item-name">🥞 虎斑鬆餅 Tabby Waffle</span>
+                <span class="item-price">220 TWD</span>
+                <div class="item-desc">外酥內軟，淋上虎斑紋巧克力醬＋鮮奶油</div>
+            </div>
+            <div class="item">
+                <span class="item-name">🍓 草莓拿鐵 Strawberry Latte</span>
+                <span class="item-price">180 TWD</span>
+                <div class="item-desc">新鮮草莓醬融合濃郁義式濃縮</div>
+            </div>
+        </div>
+
+        <!-- 喵星人饗宴 -->
+        <div class="column meow">
+            <h2>🐾 喵星人饗宴 Meow Feast</h2>
+            <div class="item">
+                <span class="item-name">🐟 鮪魚慕斯 Tuna Mousse</span>
+                <span class="item-price">120 TWD</span>
+                <div class="item-desc">細緻鮪魚泥＋貓草點綴，喵星人最愛</div>
+            </div>
+            <div class="item">
+                <span class="item-name">🐟 鮭魚小派 Salmon Tartlet</span>
+                <span class="item-price">140 TWD</span>
+                <div class="item-desc">酥脆迷你派皮包裹醇香鮭魚泥</div>
+            </div>
+            <div class="item">
+                <span class="item-name">🐓 雞肉綜合鮮食 Chicken Medley</span>
+                <span class="item-price">130 TWD</span>
+                <div class="item-desc">手撕嫩雞絲＋蔬菜泥，營養均衡</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
