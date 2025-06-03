@@ -10,7 +10,7 @@
 
     <style>
         html {
-
+            box-sizing: border-box;
             background-color: #F1F0E8;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             box-sizing: border-box;
@@ -18,7 +18,9 @@
 
         body {
             position: relative;
-
+            width: 100%;
+           
+            
         }
 
         .header {
@@ -27,7 +29,7 @@
             display: flex;
             flex-direction: row;
             top: 0;
-            left:0;
+            left: 0;
             z-index: 1000;
         }
 
@@ -68,7 +70,7 @@
 
 
         .header .logo {
-            position: absolute;
+            position: relative;
             top: -15px;
             left: 5%;
         }
@@ -164,6 +166,7 @@
 
         .header-img img {
             width: 100%;
+
             height: auto;
             display: block;
         }
@@ -204,6 +207,7 @@
             position: absolute;
             left: 55%;
             top: 50%;
+            max-width: 40vw;
         }
 
 
@@ -229,6 +233,7 @@
             position: static;
             box-shadow: none;
             padding-left: 15px;
+            transform: translateX(-10%);
         }
 
         /* 當父容器有 open class 時才顯示 */
@@ -530,7 +535,7 @@
             background-color: #D7D3BF;
             width: 100%;
             height: 100%;
-            max-width: 1440px;
+            
             padding-bottom: 2.5em;
             margin-top: 1.5em;
         }
@@ -557,14 +562,14 @@
 </head>
 
 <body>
-    
+
     <div class="header">
         <div class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
         </div>
         <div class="logo">
-            <a href="index.html"><img src="img/logo.svg" alt="logo">
-        </div></a>
+            <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
+        </div>
         <nav class="header-content" id="nav-menu">
             <div class="header-button">
                 <span><a href="02-aboutUs.html">關於我們</a></span>
@@ -690,7 +695,7 @@
         <div class="news-cardlist">
             <div class="news-card">
                 <div class="news-cat-img">
-                    <img src="/img/news_cat_quan.svg" alt="cat">
+                    <img src="img/news_cat_quan.svg" alt="cat">
                     <div class="news-label">
                         <span>叮咚～我是今天最幸福的圈圈，找到家囉！</span>
                     </div>
@@ -699,7 +704,7 @@
             </div>
             <div class="news-card">
                 <div class="news-cat-img">
-                    <img src="/img/news_cat_meatball.svg" alt="cat">
+                    <img src="img/news_cat_meatball.svg" alt="cat">
                     <div class="news-label">
                         <span> 本喵已升級：喵啡肉丸 ➜ 屋內撒嬌鬼！</span>
                     </div>
@@ -707,7 +712,7 @@
             </div>
             <div class="news-card">
                 <div class="news-cat-img">
-                    <img src="/img/news_cat_wanglai.svg" alt="cat">
+                    <img src="img/news_cat_wanglai.svg" alt="cat">
                     <div class="news-label">
                         <span>旺萊被領養啦！開心出發～</span>
                     </div>
