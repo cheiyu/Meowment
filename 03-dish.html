@@ -24,7 +24,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            margin-bottom: 5em;
+            margin:2.5em;
             gap: 3em;
             flex-wrap: wrap;
         }
@@ -51,21 +51,34 @@
         }
 
         .menu-content li {
-            margin-bottom: 2em;
-            font-size: 16px;
-            line-height: 1.6;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1em;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 1em;
         }
 
         .item-text {
-            padding-right: 6em;
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         .item-price {
-            text-align: right;
+            white-space: nowrap;
             font-weight: bold;
             color: #333;
-            margin-top: 0.3em;
+            font-size: 16px;
+            min-width: 60px;
+            text-align: right;
         }
 
         .banner-background .title {
@@ -73,8 +86,11 @@
             color: black;
             word-spacing: 0.5rem;
             position: absolute;
-            left: 45.5%;
-            top: 44%;
+            left: 50%;
+            top: 48%;
+            line-height: 1.4;
+            transform: translate(-50%, -50%);
+
         }
 
 
@@ -125,93 +141,94 @@
         </div>
     </div>
 
-    
-    <div class="menu-section">
-        <img src="img/menu_drink.svg" alt="cat with coffee" class="menu-img" />
-        <div class="menu-content">
-            <h3>咖啡與飲品</h3>
-            <ul>
-                <li>
-                    <div class="item-text"><b>橘貓美式</b> O’Americano <br>採用中淺焙莊園豆＋柑橘風味，乾淨順口，微酸尾韻。</div>
-                    <div class="item-price">$120</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>肉球拿鐵</b> Paw Latte <br>醇厚牛奶與淺焙義式濃縮，溫暖每一口。</div>
-                    <div class="item-price">$160</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>喵啡卡布奇諾</b> Meowccino <br>綿密奶泡＋濃郁義式濃縮，輕輕灑上可可粉，滑順香濃。</div>
-                    <div class="item-price">$150</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>貓薄荷摩卡</b> Catnip Mocha <br>比利時巧克力＋義式濃縮＋薄荷香氣，甜而不膩。</div>
-                    <div class="item-price">$150</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>蜜香鮮奶</b> Honey Milk Latte <br>天然百花蜂蜜調入鮮奶與濃縮，香甜柔順，尾韻回甘。</div>
-                    <div class="item-price">$140</div>
-                </li>
-            </ul>
+    <div class="dish-container">
+        <div class="menu-section">
+            <img src="img/menu_drink.svg" alt="cat with coffee" class="menu-img" />
+            <div class="menu-content">
+                <h3>咖啡與飲品</h3>
+                <ul>
+                    <li>
+                        <div class="item-text"><b>橘貓美式</b> O’Americano <br>採用中淺焙莊園豆＋柑橘風味，乾淨順口，微酸尾韻。</div>
+                        <div class="item-price">$120</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>肉球拿鐵</b> Paw Latte <br>醇厚牛奶與淺焙義式濃縮，溫暖每一口。</div>
+                        <div class="item-price">$160</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>喵啡卡布奇諾</b> Meowccino <br>綿密奶泡＋濃郁義式濃縮，輕輕灑上可可粉，滑順香濃。</div>
+                        <div class="item-price">$150</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>貓薄荷摩卡</b> Catnip Mocha <br>比利時巧克力＋義式濃縮＋薄荷香氣，甜而不膩。</div>
+                        <div class="item-price">$150</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>蜜香鮮奶</b> Honey Milk Latte <br>天然百花蜂蜜調入鮮奶與濃縮，香甜柔順，尾韻回甘。</div>
+                        <div class="item-price">$140</div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
 
-    <div class="menu-section reverse">
-        <div class="menu-content">
-            <h3>甜點</h3>
-            <ul>
-                <li>
-                    <div class="item-text"><b>虎斑鬆餅</b> Tabby Waffle <br>外脆內鬆軟，淋上虎斑花紋巧克力醬與鮮奶油。</div>
-                    <div class="item-price">$180</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>貓草盆栽</b> Grassamisu <br>綿密鬆軟的提拉米蘇, 點綴新鮮薄荷香氣，口感層次豐富。</div>
-                    <div class="item-price">$150</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>貓咪布丁</b> Kitty Pudding <br>奶香滑嫩＋微焦焦糖層，口感柔順，甜而不膩。</div>
-                    <div class="item-price">$130</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>魚魚馬卡龍</b> Fish Macaron <br>酥脆外殼＋細緻杏仁餡，造型萌趣可愛。</div>
-                    <div class="item-price">$160</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>蜜桃塔</b> Peach Tart <br>酥脆塔皮＋鮮甜蜜桃片＋香草卡士達，清爽解膩。</div>
-                    <div class="item-price">$150</div>
-                </li>
-            </ul>
+        <div class="menu-section reverse">
+            <div class="menu-content">
+                <h3>甜點</h3>
+                <ul>
+                    <li>
+                        <div class="item-text"><b>虎斑鬆餅</b> Tabby Waffle <br>外脆內鬆軟，淋上虎斑花紋巧克力醬與鮮奶油。</div>
+                        <div class="item-price">$180</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>貓草盆栽</b> Grassamisu <br>綿密鬆軟的提拉米蘇, 點綴新鮮薄荷香氣，口感層次豐富。</div>
+                        <div class="item-price">$150</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>貓咪布丁</b> Kitty Pudding <br>奶香滑嫩＋微焦焦糖層，口感柔順，甜而不膩。</div>
+                        <div class="item-price">$130</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>魚魚馬卡龍</b> Fish Macaron <br>酥脆外殼＋細緻杏仁餡，造型萌趣可愛。</div>
+                        <div class="item-price">$160</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>蜜桃塔</b> Peach Tart <br>酥脆塔皮＋鮮甜蜜桃片＋香草卡士達，清爽解膩。</div>
+                        <div class="item-price">$150</div>
+                    </li>
+                </ul>
+            </div>
+            <img src="img/menu_waffle.svg" alt="cat with dessert" class="menu-img" />
         </div>
-        <img src="img/menu_waffle.svg" alt="cat with dessert" class="menu-img" />
-    </div>
 
 
-    <div class="menu-section">
-        <img src="img/menu_catdishes.svg" alt="cat eating food" class="menu-img" />
-        <div class="menu-content">
-            <h3>喵星人盛宴</h3>
-            <ul>
-                <li>
-                    <div class="item-text"><b>蔬菜拼盤</b> Veggie Platter <br>用心挑選＋低溫處理，包含綠花椰菜。</div>
-                    <div class="item-price">$110</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>鮪魚慕斯</b> Tuna Mousse <br>絲綢般滑順＋細緻魚香，特別人設宴。</div>
-                    <div class="item-price">$120</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>鮭魚小塔</b> Salmon Tartlet <br>混搭綿密薯泥與鮮魚為貓打造。</div>
-                    <div class="item-price">$140</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>雞肉什錦餐</b> Chicken Medley <br>平衡營養設計，溫和好消化，貓咪喜愛。</div>
-                    <div class="item-price">$130</div>
-                </li>
-                <li>
-                    <div class="item-text"><b>貓草優格</b> Catgrass Yogurt <br>天然香草＋輕乳優格，解膩消化，貓咪愛愛。</div>
-                    <div class="item-price">$115</div>
-                </li>
-            </ul>
+        <div class="menu-section">
+            <img src="img/menu_catdishes.svg" alt="cat eating food" class="menu-img" />
+            <div class="menu-content">
+                <h3>喵星人盛宴</h3>
+                <ul>
+                    <li>
+                        <div class="item-text"><b>蔬菜拼盤</b> Veggie Platter <br>用心挑選＋低溫處理，包含綠花椰菜。</div>
+                        <div class="item-price">$110</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>鮪魚慕斯</b> Tuna Mousse <br>絲綢般滑順＋細緻魚香，特別人設宴。</div>
+                        <div class="item-price">$120</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>鮭魚小塔</b> Salmon Tartlet <br>混搭綿密薯泥與鮮魚為貓打造。</div>
+                        <div class="item-price">$140</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>雞肉什錦餐</b> Chicken Medley <br>平衡營養設計，溫和好消化，貓咪喜愛。</div>
+                        <div class="item-price">$130</div>
+                    </li>
+                    <li>
+                        <div class="item-text"><b>貓草優格</b> Catgrass Yogurt <br>天然香草＋輕乳優格，解膩消化，貓咪愛愛。</div>
+                        <div class="item-price">$115</div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
