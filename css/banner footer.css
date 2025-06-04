@@ -224,6 +224,7 @@ html {
             justify-content: end;
             gap: 2em;
             padding-top: 1em;
+            font-size: 12px;
         }
 
         .footer-copyright {
