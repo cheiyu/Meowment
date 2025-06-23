@@ -34,6 +34,11 @@
   .fa-2x {
     font-size: 1.25em;
   }
+.footer-txt {
+  font-size: 10px;
+}
+.footer-copyright span{
+  font-size: 6px;
+} 
+}
 
-
- }

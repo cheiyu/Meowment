@@ -112,7 +112,7 @@
 }
 
 .banner-title {
-  background-image: url(/img/banner-footer/title-colorblock.svg);
+  background-image: url(../img/banner-footer/title-colorblock.svg);
       background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -138,7 +138,7 @@
   align-content: center;
   text-align: center;
   margin: 0 auto;
-  height: 50px;
+  min-height: 50px;
   /* border: 5px solid blue; */
   border-radius: 50px;
 }
@@ -217,128 +217,7 @@ ul.header-nav li:hover > ul {
   max-width: 1440px;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .header-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.95);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: start;
-    padding: 100px 30px;
-    gap: 20px;
-    transition: right 0.4s ease-in-out;
-    z-index: 1000;
-  }
 
-  .header-nav.active {
-    right: 0;
-    background-color: #d9d9d9;
-    opacity: 0.8;
-  }
-
-  .hamburger {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-  }
-
-  .header-nav li {
-    width: 100%;
-    padding: 15px 10px;
-    border: none;
-    background: none;
-    text-align: left;
-    font-size: 1.2rem;
-    color: #222;
-    font-weight: 500;
-    border-radius: 0;
-    /* border: 1px solid black; */
-    font-size: 12px;
-  }
-
-  .header-nav li a {
-    color: #222;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-  }
-
-  .header-nav li:hover {
-    /* background-color: rgba(0, 0, 0, 0.05); */
-    background: none;
-  }
-
-  .header-nav li ul {
-    
-    font-size: 1rem;
-    position: static;
-  }
-
-  .header-nav li ul li {
-    /* padding: 5px; */
-    border: 1px solid yellow;
-    /* background: lightgrey; */
-    display: block;
-  }
-  .header-nav li ul li a {
-    /* border: 1px solid blue; */
-    background: none;
-    text-align: center;
-    border-radius: 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  /* .header-btn {
-    
-    display: block;
-    padding: 15px 10px;
-    font-size: 1.2rem;
-    color: #222;
-    cursor: pointer;
-    height: auto;
-    width: 100%;
-  } */
-  .header-nav li:hover {
-    /* border: 1px solid red; */
-    border-radius: 0px;
-  }
-
-  .header-btn a {
-    color: #222;
-    text-decoration: none;
-  }
-
-  .header-nav li.toggle ul {
-    border: 1px solid red;
-    display: none;
-    flex-direction: row;
-  
-    width: 100%;
-    height: auto;
-    background-color: none;
-  }
-
-  
-  .header-nav li.toggle ul li a {
-    background-color: #e6e6e6;
-    color: #222;
-    padding: 6px 12px;
-    display: block;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background-color 0.2s ease-in-out;
-  }
-
-  .header-nav li.toggle.open ul {
-    display: block;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .banner-title {
@@ -353,3 +232,101 @@ ul.header-nav li:hover > ul {
 
  
 }
+
+
+  @media screen and (max-width: 768px) {
+
+   
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001; /* 確保在最上層 */
+    }
+
+    
+    .header-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(233, 233, 233, 0.95); /* 用一個稍微不透明的背景比較清晰 */
+        display: flex; /* 改回 flex，才能用 gap */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 100px 30px;
+        gap: 15px; 
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    .header-nav.active {
+        right: 0;
+    }
+
+    
+    .header-nav li {
+        width: 100%;
+        padding: 0; 
+        background: none;
+        border: none;
+        position: static; 
+        text-align: start;
+    }
+    
+    
+    .header-nav li a {
+        color: #222;
+        text-decoration: none;
+        display: block; 
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    
+    .header-nav li ul {
+         position: static;
+    display: none; 
+    width: 100%;   
+    height: auto;
+    background-color: transparent;
+    list-style: none; 
+    border: none;
+    
+    margin: 15px 0 0 0; 
+    }
+
+    
+    .header-nav li.toggle.open > ul {
+        display: block;
+    }
+
+    
+    .header-nav li ul li {
+        padding: 0;
+        margin-bottom: 8px; 
+    }
+
+    .header-nav li ul li a {
+        display: block; 
+    background-color: rgba(0, 0, 0, 0.05); 
+    color: #222;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-align: left; 
+    width: 100%; 
+    text-decoration: none;
+    }
+
+    
+    .header-nav li:hover {
+        background: none;
+    }
+}
+
+

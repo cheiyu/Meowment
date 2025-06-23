@@ -347,6 +347,19 @@ h2 {
 .photo-item:hover .overlay-txt {
   opacity: 1; /* 滑入時出現遮罩 */
 }
+
+
+.care-img{
+  object-fit: cover;
+  width: 200px;
+  height: 150px;
+}
+
+.care-img img{
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
   .step-progress {

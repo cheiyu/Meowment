@@ -1,7 +1,7 @@
 
 section {
   max-width: 1024px;
-  margin: 10% auto 0;
+  margin-top: 20px;
   padding: 0 20px;
 }
 .category-nav {
@@ -34,7 +34,10 @@ section {
   overflow: hidden;
 }
 .news-img {
-  width: 30%;
+  
+  max-width: 200px;
+  max-height: 130px;
+  
 }
 .news-img img {
   width: 100%;
@@ -102,7 +105,7 @@ section {
 
   .news-img {
     width: 100%;
-    max-width: 200px;
+    
   }
 
   .news-content {

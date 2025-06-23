@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function (e) {
     const isClickInside =
       hamburger.contains(e.target) || navMenu.contains(e.target);
+
     if (!isClickInside && navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
 
