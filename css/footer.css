@@ -1,0 +1,39 @@
+.footer-container {
+  background-color: #d7d3bf;
+  padding:  0;
+  text-align: center;
+  display: flex;
+}
+
+
+
+.footer-txt {
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+  width: 100%;
+  gap: 10px;
+ margin: 10px;
+}
+
+.footer-copyright {
+    justify-self: center;
+    font-size: 8px;
+    width:auto;
+    padding-bottom: 10px;
+
+  
+}
+
+
+
+
+
+ @media screen and (max-width: 768px) {
+
+  .fa-2x {
+    font-size: 1.25em;
+  }
+
+
+ }

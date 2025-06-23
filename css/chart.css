@@ -1,0 +1,72 @@
+section {
+  justify-items: center;
+}
+
+.form-container {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px gray;
+  box-shadow: rgba(0, 0, 0, 0.5) s;
+  max-width: 80%;
+  margin-top: 13%;
+  margin-bottom: 5%;
+  height: 100vh;
+  border-radius: 5%;
+  align-content: center;
+}
+.inner-wrapper {
+  border: 4px dashed #B3C8CF;
+  border-radius: 5%;
+  margin: 0 2.5% 0 2.5%;
+  height: 95vh;
+  padding: 3%;
+  display: grid;
+  grid-template-rows: repeat(8,1fr);
+  justify-content: center;
+}
+.form-group {
+  /* border: 1px solid red; */
+ 
+  display: inline-block;
+  align-content: center;
+}
+
+label {
+  font-size: 1.4rem;
+  flex-basis: 200px;
+  text-align: left;
+  margin: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"] {
+  width: 60%;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #efefef;
+}
+
+.form-group:nth-of-type(1) label,
+.form-group:nth-of-type(2) label {
+  padding-right: 2.7rem;
+}
+
+button[type="submit"] {
+  background-color: #a59d84;
+  color: #fff;
+  width: 10%;
+  padding: 0.3em;
+  border: none;
+  border-radius: 10%;
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+
+select{
+    text-align: center;
+    width: 15%;
+    height: 1.5rem;
+}

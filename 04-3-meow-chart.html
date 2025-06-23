@@ -4,200 +4,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>領養表單</title>
+    <title>領養須知</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/banner footer.css">
-    <style>
-        .banner-background .title {
-            font-size: 2rem;
-            color: black;
-            word-spacing: 0.5rem;
-            position: absolute;
-            left: 45.5%;
-            top: 44%;
-        }
-
-        .form-section {
-            max-width: 720px;
-            margin: 3em auto;
-            background-color: #fff;
-            padding: 2em;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            margin-bottom: 1.5em;
-            background: #F7F2EC;
-            padding: 1em;
-            border-radius: 30px;
-            border: 2px dashed #AABCCD;
-            display: inline-block;
-        }
-
-        .form-group {
-            margin-bottom: 1em;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
-
-        input[type="text"],
-        input[type="email"] {
-            width: 10em;
-            padding: 0.5em;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #EFEFEF;
-        }
-
-        button[type="submit"] {
-            background-color: #A59D84;
-            color: #fff;
-            width:5em;
-            padding: 0.3em;
-            border:none;
-            border-radius: 10%;
-        }
-
-        .checkbox-group {
-            display: flex;
-            gap: 1em;
-            margin-top: 0.5em;
-            flex-wrap: wrap;
-        }
-
-        .checkbox-group label {
-            font-weight: normal;
-        }
-
-       
-        .form-container{
-            margin-top: 2em;
-            margin-left: 20em;
-            padding: 2em;
-            background-color: #e3e1de;
-            max-width: 50vw;
-            border-radius: 5%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="header">
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.svg" alt="logo">
-        </div></a>
-        <nav class="header-content" id="nav-menu">
-            <div class="header-button">
-                <span><a href="02-aboutUs.html">關於我們</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="06-news.html">最新消息</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="03-dish.html">餐點目錄</a></span>
-            </div>
 
-            <div class="header-button-dropdown">
-                <span class="dropdown-toggle">帶喵回家</span>
-                <ul class="dropdown-menu">
-                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
-                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
-                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+    <div class="layout">
+        <div class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html"><img src="img/banner-footer/logo.svg" alt="logo"></a>
+                </div>
+                <ul class="header-nav" id="nav-menu">
+                    <li class="header-btn active">
+                        <a href="02-aboutUs.html">關於我們</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="06-news.html">最新消息</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="03-dish.html">餐點目錄</a>
+                    </li>
+
+                    <li class="header-btn toggle">
+                        <a href="#">帶喵回家</a>
+                        <ul>
+                            <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                            <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="header-btn active"><a href="05-reservation.html">我要預約</a></li>
                 </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
             </div>
-            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+        </div>
 
-        </nav>
-    </div>
 
-    <div class="banner-background">
+        <div class="banner-img-right">
+            <img src="img/banner-footer/banner-block-right.svg" alt="">
+        </div>
+
+
         <div class="banner-img">
-            <img src="img/banner_background.svg" alt="backgroundImg">
+            <img src="img/banner-footer/banner-block.png" alt="">
         </div>
-        <div class="title">
-            <span>領養表單</span>
+        <!-- <div class="title-container">
+            <div class="text-decoration">
+                <img src="img/banner-footer/title-colorblock.svg" alt="">
+            </div> -->
+        <div class="banner-title">
+            <h1>關於我們</h1>
         </div>
-    </div>
-    <div class="form-container">
-    <div class="form-group">
-        <label for="name">姓名</label>
-        <input type="text" id="name">
-    </div>
-    <div class="form-group">
-        <label for="phone">電話</label>
-        <input type="text" id="phone">
-    </div>
-    <div class="form-group">
-        <label for="email">電子郵件</label>
-        <input type="email" id="email">
-    </div>
-    <div class="form-group">
-        <label for="catname">想領養的貓咪</label>
-        <input type="text" id="catname">
-    </div>
-    <div class="form-group">
-        <label>是否租屋</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox"> 是</label>
-            <label>附上房東同意書<input type="file"></label>
-            <label><input type="checkbox"> 否</label>
-        </div>
-    </div>
-    <div class="form-group">
-        <label>家中環境照片</label>
-        <div class="checkbox-group">
-            <label><input type="file"></label>
+        <!-- </div>
+        </div> -->
 
-        </div>
-    </div>
-    <div class="form-group">
-        <label>家中是否有其他寵物</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox"> 是</label>
-            <label>飼養物種 <input type="text"> </label>
-            <label><input type="checkbox"> 否</label>
-        </div>
-    </div>
-    <div class="form-group">
-        <label><input type="checkbox"> 已詳閱<a href="04-1-meow-preparation.html" target="_blank">領養須知</a></label>
-    </div>
-    <div class="confirm">
-        <label><button type="submit">送出</button></label>
-    </div>
-    </section>
-    </div>
-    </div>
-    <footer>
-        <div class="footer-container">
-            <div class="logo">
-                <img src="img/logo.svg" alt="logo">
-            </div>
-            <div class="footer-txt">
-                <span>常見問題</span>
-                <span>聯絡我們</span>
-                <span>隱私權政策</span>
-                <span>使用者條款</span>
-            </div>
-            <div class="footer-icon">
+        <!-- <div class="body-background-img">
+            <img src="../img/banner-footer/body_background.svg" alt="">
+        </div> -->
+
+
+        <section>
+            <div class="form-container">
+                <div class="inner-wrapper">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話</label>
+                        <input type="phone" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">電子郵件</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="catname">想領養的貓咪</label>
+                        <select>
+                            <option value="炸蝦">炸蝦</option>
+                            <option value="蒲仔">蒲仔</option>
+                            <option value="喵咪">喵咪</option>
+                            <option value="黑輪">黑輪</option>
+                            <option value="泰迪">泰迪</option>
+                            <option value="小胖">小胖</option>
+                            <option value="麻吉">麻吉</option>
+                            <option value="泡芙">泡芙</option>
+                            <option value="小花">小花</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>是否租屋</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="yesno" value="是"> 是</label>
+                            <label>附上房東同意書<input type="file"></label>
+                            <label><br>
+                                <input type="radio" name="yesno" value="否"> 否
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>家中環境照片</label>
+                        <input id="upload" type="file">
+                        <label type="button" for="upload" class="uploadStyle">
+                            請選擇檔案
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>家中是否有其他寵物</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox"> 是</label>
+                            <label>飼養物種 <input type="text"> </label>
+                            <label><input type="checkbox"> 否</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p><input type="checkbox"> 已詳閱<a href="04-1-meow-preparation.html" target="_blank">領養須知</a></p>
+                    </div>
+                    <div class="confirm">
+                        <button type="submit">送出</button>
+                    </div>
+                </div>
 
             </div>
-            <div class="footer-copyright">
-                <span> Copyright © 2025</span>
+        </section>
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="img/banner-footer/logo.svg" alt="logo">
+                    <div class="footer-copyright">
+                        <span> Copyright © 2025</span>
+                    </div>
+                </div>
+
+                <div class="footer-txt">
+                    <span>常見問題</span>
+                    <span>聯絡我們</span>
+                    <span>隱私權政策</span>
+                    <span>使用者條款</span>
+                    <div class="footer-icon">
+                        <i class="fa-brands fa-square-facebook fa-2x"></i>
+                        <i class="fa-brands fa-square-instagram fa-2x"></i>
+                        <i class="fa-brands fa-line fa-2x"></i>
+                    </div>
+                </div>
+
+
+
+
             </div>
+        </footer>
 
-        </div>
-
-    </footer>
+    </div>
 </body>
 
 </html>

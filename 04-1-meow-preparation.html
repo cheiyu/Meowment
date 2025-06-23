@@ -1,493 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+TC:wght@100..900&display=swap"
+    rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Oooh Baby' rel='stylesheet'>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>領養須知</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/banner footer.css">
-    <style>
-        .section {
-            margin: 2em auto;
-            width: 90%;
-            max-width: 1000px;
-        }
-
-        .section-head {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 1em;
-        }
-
-        .section-head .section-title {
-            /* background-color: #D7E2E8; */
-            display: inline-block;
-            padding: 0.5em 1em;
-            border-radius: 20px;
-            font-weight: bold;
-            margin: 0;
-            font-size: 20px;
-            white-space: nowrap;
-        }
-
-        .section-head .intro-text {
-            font-size: 16px;
-            margin: 0;
-            flex: 1;
-            padding-left: 1em;
-            color: #899CB2;
-        }
-
-        .section-title {
-            /* background-color: #D7E2E8; */
-            display: inline-block;
-            padding: 0.5em 1em;
-            /* border-radius: 20px; */
-            font-weight: bold;
-            margin-bottom: 1em;
-            font-size: 20px;
-        }
-
-        .intro-text {
-            margin: 1em 0;
-            font-size: 16px;
-            text-align: center;
-        }
-
-        .photo-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 1em;
-            margin-bottom: 2em;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            border-radius: 10px;
-            flex: 1;
-            opacity: 90%;
-        }
-
-        .photo-item {
-            position: relative;
-            overflow: hidden;
-            flex: 1;
-        }
-
-        .photo-item img {
-            width: 100%;
-            border-radius: 10px;
-            display: block;
-            opacity: 90%;
-            transition: 0.3s ease;
-        }
-
-        .photo-item::after {
-            content: attr(data-label);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 0.8em;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            text-align: center;
-            font-size: 16px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .photo-item:hover::after {
-            opacity: 1;
-        }
-
-        .photo-item:hover img {
-            transform: scale(1.03);
-        }
-
-        .grid-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1em;
-            justify-content: center;
-        }
-
-        .grid-item {
-            background-color: #EAEAEA;
-            padding: 0.8em 1.2em;
-            border-radius: 15px;
-            font-size: 14px;
-        }
-
-        .icon-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2em;
-            margin: 1.5em 0;
-            font-size: 14px;
-        }
-
-        .carousel {
-            margin: 3em auto;
-            background-color: #B3C8CF;
-            padding: 2em;
-            border-radius: 20px;
-            max-width: 300px;
-            position: relative;
-            text-align: center;
-        }
-
-        .carousel .step-icon {
-            font-size: 24px;
-            margin-bottom: 0.5em;
-        }
-
-        .carousel button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #fff;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-        }
-
-        .carousel button.left {
-            left: -1em;
-        }
-
-        .carousel button.right {
-            right: -1em;
-        }
-
-        .banner-background .title {
-            font-size: 2rem;
-            color: black;
-            word-spacing: 0.5rem;
-            position: absolute;
-            left: 45.5%;
-            top: 45%;
-        }
-
-        h3 {
-            margin-bottom: 1em;
-        }
-
-        .process-container {
-            background: #FFF9F0;
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 360px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        /* 分段式進度條 */
-        .step-progress {
-            display: flex;
-            gap: 4px;
-            margin-bottom: 16px;
-        }
-
-        .step-progress .segment {
-            flex: 1;
-            height: 6px;
-            background-color: #E0E0E0;
-            border-radius: 3px;
-        }
-
-        .step-progress .segment.active.step-1 {
-            background-color: #899CB2;
-        }
-
-        .step-progress .segment.active.step-2 {
-            background-color: #899CB2;
-            border: 1px solid #CCC;
-        }
-
-        .step-progress .segment.active.step-3 {
-            background-color: #899CB2;
-        }
-
-        .step-progress .segment.active.step-4 {
-            background-color: #899CB2;
-        }
-
-        .step-progress .segment.active.step-5 {
-            background-color: #899CB2;
-        }
-
-        .step-progress .segment.active.step-6 {
-            background-color: #899CB2;
-        }
-
-        /* 箭頭按鈕 */
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 32px;
-            height: 32px;
-            border: none;
-            background: #FFFFFF;
-            border-radius: 50%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-            font-size: 18px;
-            cursor: pointer;
-            color: #7A7A7A;
-            line-height: 1;
-        }
-
-        #prevBtn {
-            left: -16px;
-        }
-
-        #nextBtn {
-            right: -16px;
-        }
-
-        .nav-btn:disabled {
-            opacity: 0.4;
-            cursor: default;
-        }
-
-        .step-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-        }
-
-        .step-title {
-            margin-top: 16px;
-            font-weight: 600;
-            font-size: 16px;
-            color: #7A7A7A;
-        }
-
-        .step-desc {
-            margin-top: 8px;
-            font-size: 14px;
-            line-height: 20px;
-        }
-
-        /* 對應顏色 */
-        .step-1 .step-icon {
-            background-color: #899CB2;
-        }
-
-        .step-2 .step-icon {
-            background-color: #899CB2;
-            border: 1px solid #CCC;
-        }
-
-        .step-3 .step-icon {
-            background-color: #899CB2;
-        }
-
-        .step-4 .step-icon {
-            background-color: #899CB2;
-        }
-
-        .step-5 .step-icon {
-            background-color: #899CB2;
-        }
-
-        .step-6 .step-icon {
-            background-color: #899CB2;
-        }
-    </style>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/meow-preparation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="header">
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.svg" alt="logo">
-        </div></a>
-        <nav class="header-content" id="nav-menu">
-            <div class="header-button">
-                <span><a href="02-aboutUs.html">關於我們</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="06-news.html">最新消息</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="03-dish.html">餐點目錄</a></span>
-            </div>
 
-            <div class="header-button-dropdown">
-                <span class="dropdown-toggle">帶喵回家</span>
-                <ul class="dropdown-menu">
-                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
-                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
-                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+    <div class="layout">
+
+        <div class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html"><img src="img/banner-footer/logo.svg" alt="logo"></a>
+                </div>
+                <ul class="header-nav" id="nav-menu">
+                    <li class="header-btn active">
+                        <a href="02-aboutUs.html">關於我們</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="06-news.html">最新消息</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="03-dish.html">餐點目錄</a>
+                    </li>
+
+                    <li class="header-btn toggle">
+                        <a href="#">帶喵回家</a>
+                        <ul>
+                            <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                            <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="header-btn active"><a href="05-reservation.html">我要預約</a></li>
                 </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
             </div>
-            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+        </div>
 
-        </nav>
-    </div>
 
-    <div class="banner-background">
+        <div class="banner-img-right">
+            <img src="img/banner-footer/banner-block-right.svg" alt="">
+        </div>
+
+
         <div class="banner-img">
-            <img src="img/banner_background.svg" alt="backgroundImg">
+            <img src="img/banner-footer/banner-block.png" alt="">
         </div>
-        <div class="title">
-            <span>領養須知</span>
-
+        <!-- <div class="title-container">
+            <div class="text-decoration">
+                <img src="img/banner-footer/title-colorblock.svg" alt="">
+            </div> -->
+        <div class="banner-title">
+            <h1>領養需知</h1>
         </div>
-    </div>
+        <!-- </div>
+        </div> -->
 
-    <div class="section">
-        <div class="section-head">
-            <div class="section-title">領養準備</div>
-            <p class="intro-text">在迎接新家人前，請先確認以下準備與規劃，讓牠擁有幸福的第二人生</p>
-        </div>
-
-        <div class="photo-grid">
-            <div class="photo-item" data-label="足夠空間">
-                <img src="img/preparation_room.svg" alt="足夠空間">
-            </div>
-            <div class="photo-item" data-label="安全防護">
-                <img src="img/preparation_prevent.svg" alt="安全防護">
-            </div>
-            <div class="photo-item" data-label="陪伴的心">
-                <img src="img/preparation_cat.svg" alt="陪伴的心">
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">必備物資清單</div>
-        <div class="grid-box">
-            <div class="grid-item">貓砂盆＆貓砂</div>
-            <div class="grid-item">貓飼料</div>
-            <div class="grid-item">貓碗＆飲水器</div>
-            <div class="grid-item">貓抓板</div>
-            <div class="grid-item">玩具</div>
-            <div class="grid-item">梳毛器</div>
-            <div class="grid-item">貓籠/提籠</div>
-            <div class="grid-item">指甲剪</div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">日常照顧規劃</div>
-        <div class="icon-grid">
-            <div>絕育 / 結紮</div>
-            <div>疫苗與驅蟲針</div>
-            <div>貓咪個資登錄</div>
-            <div>飲食管理</div>
-            <div>互動與陪伴</div>
-            <div>定期健康檢查</div>
-        </div>
-    </div>
-    <div class="section">
-    <div class="section-title">領養流程</div>
-
-    <div class="process-container">
-        <!-- 分段式進度條 -->
-        <div class="step-progress" id="stepProgress">
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
-            <div class="segment"></div>
+        <div class="body-background-img">
+            <img src="../img/banner-footer/body_background.svg" alt="">
         </div>
 
-        <button id="prevBtn" class="nav-btn" disabled>‹</button>
-        <div id="stepCard"></div>
-        <button id="nextBtn" class="nav-btn">›</button>
+        <div class="section">
+            <section>
+
+                <div class="word-block1">
+                    <h2>領養準備</h2>
+                </div>
+
+
+
+                <div class="photo-grid">
+
+                    <div class="photo-item" data-label="足夠空間">
+                        <img src="img/meow preparation/preparation_room.png" alt="足夠空間">
+                        <div class="overlay-txt">
+                            <p>足夠空間</p>
+                        </div>
+
+                    </div>
+                    <div class="photo-item" data-label="安全防護">
+                        <img src="img/meow preparation/preparation_prevent.png" alt="安全防護">
+
+                        <div class="overlay-txt">
+                            <p>安全防護</p>
+                        </div>
+                    </div>
+
+                    <div class="photo-item" data-label="陪伴的心">
+                        <img src="img/meow preparation/preparation_cat.svg" alt="陪伴的心">
+                        <div class="overlay-txt">
+                            <p>陪伴的心</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="progress">
+                <div class="word-block2">
+                    <h2>領養流程</h2>
+                </div>
+
+
+                <div class="step-card-list">
+                    <div class="step-progress">
+                        <span class="dot active"></span>
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span
+                            class="dot"></span><span class="dot"></span>
+                    </div>
+
+                    <div class="step-card active">
+                        <i class="fa-solid fa-book fa-2xl"></i>
+                        <h3>STEP 1: 詳閱領養須知</h3>
+                        <p>請先閱讀我們的【領養須知】，確認您了解並同意相關責任與條件。</p>
+                    </div>
+
+                    <div class="step-card">
+                        <i class="fa-solid fa-paw fa-2xl"></i>
+                        <h3>STEP 2: 親訪咖啡廳見貓咪</h3>
+                        <p>歡迎親臨「喵啡 Meowment」，與貓咪互動，觀察牠們的性格與生活習慣。</p>
+                    </div>
+
+                    <div class="step-card">
+                        <i class="fa fa-file-text fa-2xl"></i>
+                        <h3>STEP 3: 填寫領養申請表</h3>
+                        <p>若您有意願領養，請填寫申請表單，讓我們了解您的飼養環境與照顧計劃。</p>
+                    </div>
+
+                    <div class="step-card">
+                        <i class="fas fa-envelope fa-2xl"></i>
+                        <h3>STEP 4: 審核並通知結果</h3>
+                        <p>我們會審核申請內容，並於幾日內以郵件及電話通知是否通過。</p>
+                    </div>
+
+                    <div class="step-card">
+                        <i class="fas fa-home fa-2xl"></i>
+                        <h3>STEP 5: 簽署契約並接貓回家</h3>
+                        <p>確認通過後，將與您簽訂領養契約，並安排時間帶毛孩回家展開新生活。</p>
+                    </div>
+
+                    <div class="step-card">
+                        <i class="fa-solid fa-camera fa-2xl"></i>
+                        <h3>STEP 6: 三個月關懷追蹤</h3>
+                        <p>為確保毛孩適應良好，我們會進行簡單回訪，陪伴您一起成為更棒的貓奴♡</p>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <div class="step-card-container">
+                        <button class="arrow left" id="pre-btn"> <i class="fas fa-angle-left"></i></button>
+                    </div>
+                    <button class="arrow right" id="next-btn"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </section>
+
+            <section>
+
+                <div class="word-block3">
+                    <h2>必備物資清單</h2>
+                </div>
+
+                <div class="item-list">
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="item box1">
+                        <img src="img/meow preparation/toy.svg" alt="">
+                        <p>玩具</p>
+                    </div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="item box2">
+                        <img src="img/meow preparation/bathroom.svg" alt="">
+                        <p>貓砂盆&貓砂</p>
+                    </div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="item box3">
+                        <img src="img/meow preparation/scratching.svg" alt="">
+                        <p>貓抓板</p>
+                    </div>
+
+                    <div class="empty"></div>
+
+                    <div class="item cat">
+                        <img src="img/meow preparation/wondering_cat.svg" alt="">
+                    </div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="item box4">
+                        <img src="img/meow preparation/scissors.svg" alt="">
+                        <p>指甲剪</p>
+                    </div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="item box5">
+                        <img src="img/meow preparation/food.svg" alt="">
+                        <img src="img/meow preparation/bowl.svg" alt="">
+                        <p>碗&食物&水</p>
+                    </div>
+
+                    <div class="empty"></div>
+
+                    <div class="empty"></div>
+
+                    <div class="item box6">
+                        <img src="img/meow preparation/jump.svg" alt="">
+                        <p>貓跳台</p>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <div class="word-block4">
+                    <h2>日常照顧規劃</h2>
+                </div>
+                <div class="care-list">
+                    <div class="care-card">
+                        <div class="care-img"><img src="https://picsum.photos/200/150/?random=10"></div>
+                        <p class="care-txt">絕育 / 結紮</p>
+                    </div>
+                    <div class="care-card">
+                        <div class="care-img"><img src="https://picsum.photos/200/150/?random=10"></div>
+                        <p class="care-txt">疫苗與驅蟲</p>
+                    </div>
+                    <div class="care-card">
+                        <div class="care-img"><img src="https://picsum.photos/200/150/?random=10"></div>
+                        <p class="care-txt">貓咪個資登錄</p>
+                    </div>
+                    <div class="care-card">
+                        <div class="care-img"><img src="https://picsum.photos/200/150/?random=10"></div>
+                        <p class="care-txt">飲食管理</p>
+                    </div>
+                    <div class="care-card">
+                        <div class="care-img"><img src="https://picsum.photos/200/150/?random=10"></div>
+                        <p class="care-txt">互動與陪伴</p>
+                    </div>
+                    <div class="care-card">
+                        <div class="care-img"><img src="https://picsum.photos/200/150/?random=10"></div>
+                        <p class="care-txt">定期健康檢查</p>
+                    </div>
+                </div>
+
+        </div>
+        </section>
     </div>
-    </div>
 
-    <script>
-        const steps = [
-            { icon: '🐾', title: 'STEP 1：見面相見', desc: '先到咖啡廳，與貓咪互動，確認彼此緣分。', cls: 'step-1' },
-            { icon: '📖', title: 'STEP 2：詳閱需知', desc: '閱讀領養資格與注意事項，確保準備妥當。', cls: 'step-2' },
-            { icon: '📝', title: 'STEP 3：填寫表單', desc: '填寫線上或現場表單，提供飼養環境與經驗。', cls: 'step-3' },
-            { icon: '✉️', title: 'STEP 4：審核通知', desc: '3 天內完成審核並以郵件通知，逾期視為放棄。', cls: 'step-4' },
-            { icon: '🏠', title: 'STEP 5：接貓回家', desc: '攜帶外出籠或毛毯，到咖啡廳接貓咪回家。', cls: 'step-5' },
-            { icon: '📸', title: 'STEP 6：三月追蹤', desc: '回家後三個月內，提供貓咪近照，持續關懷。', cls: 'step-6' },
-        ];
-
-        let current = 0;
-        const stepCard = document.getElementById('stepCard');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const progressSegments = document.querySelectorAll('#stepProgress .segment');
-
-        function renderStep() {
-            // 更新卡片內容
-            const { icon, title, desc, cls } = steps[current];
-            stepCard.innerHTML = `
-        <div class="step-icon ${cls}">${icon}</div>
-        <div class="step-title">${title}</div>
-        <div class="step-desc">${desc}</div>
-      `;
-            // 更新按鈕狀態
-            prevBtn.disabled = (current === 0);
-            nextBtn.disabled = (current === steps.length - 1);
-            // 更新進度條
-            progressSegments.forEach((seg, idx) => {
-                seg.className = 'segment' + (idx <= current ? ` active step-${idx + 1}` : '');
-            });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (current > 0) current--;
-            renderStep();
-        });
-        nextBtn.addEventListener('click', () => {
-            if (current < steps.length - 1) current++;
-            renderStep();
-        });
-
-        // 初次載入
-        renderStep();
-    </script>
-
-
-    </div>
     <footer>
         <div class="footer-container">
             <div class="logo">
-                <img src="img/logo.svg" alt="logo">
+                <img src="img/banner-footer/logo.svg" alt="logo">
+                <div class="footer-copyright">
+                    <span> Copyright © 2025</span>
+                </div>
             </div>
+
             <div class="footer-txt">
                 <span>常見問題</span>
                 <span>聯絡我們</span>
                 <span>隱私權政策</span>
                 <span>使用者條款</span>
+                <div class="footer-icon">
+                    <i class="fa-brands fa-square-facebook fa-2x"></i>
+                    <i class="fa-brands fa-square-instagram fa-2x"></i>
+                    <i class="fa-brands fa-line fa-2x"></i>
+                </div>
             </div>
-            <div class="footer-icon">
 
-            </div>
-            <div class="footer-copyright">
-                <span> Copyright © 2025</span>
-            </div>
+
+
 
         </div>
-
     </footer>
+
+
+    <script src="/javascript/js.js"> </script>
 </body>
 
 </html>

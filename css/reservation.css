@@ -1,0 +1,143 @@
+.adoption-form-wrapper {
+  position: relative;
+  margin: 5vh auto;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+  
+}
+
+
+
+.notice-block, .booking-form {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+.notice-block {
+  background-color: #fdf6ec;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #3b3b3b;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.notice-block h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #5b4636;
+}
+
+.notice-block p {
+  margin: 0.3rem 0;
+}
+
+.booking-form h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #5b4636;
+}
+
+.calendar-container {
+  background: #fdeee8;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.calendar-day {
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calendar-day.disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.calendar-day.selected {
+  background-color: #e07058;
+  color: #fff;
+}
+
+.time-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.time-slot {
+  padding: 0.5rem 1rem;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.time-slot.disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.time-slot.selected {
+  background-color: #a59d84;
+  color: white;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.booking-form button {
+  background-color: #a59d84;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #998c6c;
+}

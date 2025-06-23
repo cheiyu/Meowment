@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "hachi maru pop";
+  font-size: 100%;
+}
+
+
+.layout {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f0e8;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* background-image: url(/img/banner-footer/body_background.svg);
+  background-position: -30px;
+    background-size: cover;
+  background-repeat:space; */
+
+ 
+}
+
+.layout section{
+  flex:1;
+  
+}

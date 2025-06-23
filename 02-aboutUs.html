@@ -1,191 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href='https://fonts.googleapis.com/css?family=Oooh Baby' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+TC:wght@100..900&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於我們</title>
+
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/banner footer.css">
-
-    <style>
-        .banner-background .title {
-            font-size: 2rem;
-            color: black;
-            word-spacing: 0.5rem;
-            position: absolute;
-            left: 45.5%;
-            top: 45%;
-        }
-
-        .body-background {
-            position: relative;
-            width: 100%;
-
-        }
-
-        .body-img {
-            position: relative;
-            margin-right: 10em;
-            width: 100%;
-            max-width: 1140px;
-            height: 100%;
-        }
-
-        .body-img img {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-        }
-
-        .aboutUs-name {
-
-            font-size: 36px;
-            position: absolute;
-            margin-left: 8em;
-
-        }
-
-        .aboutUs-slogan {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 28px;
-            color: #999;
-            font-weight: normal;
-        }
-
-        .description {
-            margin-left: 12%;
-            margin-top: 6em;
-            margin-bottom: 1em;
-            width: 75%;
-        }
-
-        .invitation-txt {
-            text-align: right;
-            font-weight: bold;
-            margin-top: 1em;
-            margin-bottom: 1em;
-            padding-right: 1em;
-
-
-        }
-
-        .value-list {
-            position: absolute;
-            margin-left: 80%;
-            top: 50%;
-            
-        }
-
-        .value-list ul {
-            list-style-type: disc;
-            padding-left: 1.5em;
-         
-        }
-
-        .value-list li {
-            padding: 0.5em 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="header">
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.svg" alt="logo">
-        </div></a>
-        <nav class="header-content" id="nav-menu">
-            <div class="header-button">
-                <span><a href="02-aboutUs.html">關於我們</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="06-news.html">最新消息</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="03-dish.html">餐點目錄</a></span>
-            </div>
 
-            <div class="header-button-dropdown">
-                <span class="dropdown-toggle">帶喵回家</span>
-                <ul class="dropdown-menu">
-                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
-                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
-                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+    <div class="layout">
+
+        <div class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html"><img src="img/banner-footer/logo.svg" alt="logo"></a>
+                </div>
+                <ul class="header-nav" id="nav-menu">
+                    <li class="header-btn active">
+                        <a href="02-aboutUs.html">關於我們</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="06-news.html">最新消息</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="03-dish.html">餐點目錄</a>
+                    </li>
+
+                    <li class="header-btn toggle">
+                        <a href="#">帶喵回家</a>
+                        <ul>
+                            <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                            <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="header-btn active"><a href="05-reservation.html">我要預約</a></li>
                 </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
             </div>
-            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+        </div>
 
-        </nav>
-    </div>
 
-    <div class="banner-background">
+        <div class="banner-img-right">
+            <img src="img/banner-footer/banner-block-right.svg" alt="">
+        </div>
+
+
         <div class="banner-img">
-            <img src="img/banner_background.svg" alt="backgroundImg">
+            <img src="img/banner-footer/banner-block.png" alt="">
         </div>
-        <div class="title">
-            <span>關於我們</span>
+        <!-- <div class="title-container">
+            <div class="text-decoration">
+                <img src="img/banner-footer/title-colorblock.svg" alt="">
+            </div> -->
+        <div class="banner-title">
+            <h1>關於我們</h1>
         </div>
-      
+        <!-- </div>
+        </div> -->
 
-    </div>
+        <!-- <div class="body-background-img">
+            <img src="../img/banner-footer/body_background.svg" alt="">
+        </div> -->
 
-    <div class="body-background">
-          <div class="aboutUs-name">
-            <span class="Meowment">Meowment 喵啡</span><br>
-            <span class="aboutUs-slogan">With Meow, Every Moment is Better.</span>
-        </div>
-         <!-- <div class="aboutUs-txt">
-            <p class="description">一個專為愛貓人士打造的溫暖角落。在這裡，咖啡香氣與貓咪的柔軟陪伴交織，讓每一次來訪都成為一段療癒的時光</p></div> -->
-        <div class="body-img">
-            <img src="img/aboutUs_cat.svg" alt="cat">
-        </div>
-          
-    </div>
+        <section>
+            <div class="aboutUs-intro">
+                <h2 class="Meowment">Meowment 喵啡</h2><br>
+                <p class="aboutUs-slogan">With Meow, Every Moment is Better.</p>
+            </div>
+            <hr>
+            <div class="aboutUs-dia">
+                <div class="dia">
+                    <img src="/img/aboutUs/diacatleft.svg" alt="" class="left">
+                    <p>品牌理念</p>
+                </div>
+                <div class="dia">
+                    <img src="/img/aboutUs/diacatright.svg" alt="" class="right">
+                    <p>一個專為愛貓人士打造的溫暖角落。
+                        在這裡，咖啡香氣與貓咪的柔軟陪伴交織，讓每一次來訪都成為一段療癒的時光</p>
+                </div>
+                <div class="dia">
+                    <img src="/img/aboutUs/diacatleft.svg" alt="" class="left">
+                    <p>店內特色</p>
+                </div>
+                <div class="dia">
+                    <img src="/img/aboutUs/diacatright.svg" alt="" class="right">
+                    <p>舒適的空間設計，適合閱讀、放空、與貓咪互動
+                        所有店貓皆可認養，讓咖啡時光變成幸福的起點
+                        咖啡豆與甜點講究手作與選材，用心款待每一位客人</p>
+                </div>
+                <div class="dia">
+                    <img src="/img/aboutUs/diacatleft.svg" alt="" class="left">
+                    <p>喵啡在哪</p>
+                </div>
+                <div class="dia">
+                    <img src="/img/aboutUs/diacatright.svg" alt="" class="right">
+                    <div class="location">
+                        <p>地址: 320桃園市中壢區復興路46號8樓
+                            電話:(03)1234-5678
+                        </p>
 
-    
-     
-            <div class="value-list">
-                <h3>我們的價值觀</h3>
-                <ul>
-                    <li>尊重每一個生命</li>
-                    <li>支持負責任的領養行動</li>
-                    <li>創造友善與溫暖的社群</li>
-                    <li>傾聽每位貓咪與來訪者的故事</li>
-                </ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.249035944328!2d121.22244777302613!3d24.957640341366485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823ea50c732a5%3A0x1b5e6ee66e9fec49!2z57ev6IKyVGliYU1l6ZmE6Kit5Lit5aOi6IG36KiT5Lit5b-D!5e0!3m2!1szh-CN!2stw!4v1750514240694!5m2!1szh-CN!2stw"
+                            width="97%" height="70%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
 
-
-        
-
-    <div class="invitation">
-        <p class="invitation-txt">邀請您，一起走進喵啡，遇見命中注定的那隻貓。</p>
+        </section>
+        <div class="decoration">
+            <img src="/img/aboutUs/aboutUs_cat.png" alt="">
+        </div>
     </div>
+
+    </div>
+
     <footer>
         <div class="footer-container">
             <div class="logo">
-                <img src="img/logo.svg" alt="logo">
+                <img src="img/banner-footer/logo.svg" alt="logo">
+                <div class="footer-copyright">
+                    <span> Copyright © 2025</span>
+                </div>
             </div>
+
             <div class="footer-txt">
                 <span>常見問題</span>
                 <span>聯絡我們</span>
                 <span>隱私權政策</span>
                 <span>使用者條款</span>
+                <div class="footer-icon">
+                    <i class="fa-brands fa-square-facebook fa-2x"></i>
+                    <i class="fa-brands fa-square-instagram fa-2x"></i>
+                    <i class="fa-brands fa-line fa-2x"></i>
+                </div>
             </div>
-            <div class="footer-icon">
 
-            </div>
-            <div class="footer-copyright">
-                <span> Copyright © 2025</span>
-            </div>
+
+
 
         </div>
-
     </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="/javascript/js.js"></script>
+
+
 </body>
 
 </html>

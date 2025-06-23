@@ -1,0 +1,116 @@
+
+section{
+  margin-top: 10%;
+}
+
+
+.aboutUs-intro .aboutUs-slogan {
+  font-family: "Oooh Baby";
+  color: rgb(137, 156, 178);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dia {
+  display: flex;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.dia.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dia:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.dia:nth-child(odd) img {
+  flex-basis: 80px;
+  width: 10%;
+}
+
+.dia:nth-child(even) img {
+  flex-basis: 80px;
+  width: 10%;
+  padding-right: 1%;
+}
+
+.dia p {
+  align-content: center;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 20px;
+  line-height: 20px;
+}
+
+.dia:nth-child(odd) p {
+  background-color: #e9e2dc;
+}
+
+.dia:nth-child(even) p {
+  background-color: #d9d9d9;
+  width: 40%;
+}
+
+.location {
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 35%;
+  
+  margin: 2%;
+}
+.dia .location p {
+  width: 70%;
+}
+
+.location iframe {
+  border-radius: 20px;
+  padding: 0 0 3% 3%;
+}
+
+.decoration {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  align-content: end;
+}
+.decoration img {
+  width: 100%;
+  
+}
+
+ @media screen and (max-width: 767px) {
+
+  section{
+  margin-top: 25%;
+}
+
+.aboutUs-intro {
+  font-size: 12px;
+}
+
+.aboutUs-slogan {
+ font-size: 10px;
+ }
+ .dia{
+  flex-grow: 1;
+  font-size: 10px;
+ }
+
+ .dia:last-child{
+  display: flex;
+ }
+
+ .location{
+  flex-grow: 1;
+ }
+ }

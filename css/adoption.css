@@ -1,0 +1,260 @@
+.section {
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.adoption-cardlist {
+  width: 100%;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+
+/* 貓咪背景色塊
+
+.adoption-card:nth-child(odd){
+    background-image: url(/img/meow-adoption/bgcolor1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.adoption-card:nth-child(even){
+    background-image: url(/img/meow-adoption/bgcolor2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.adoption-card:hover .adoption-txt {
+  transform: translateY(50%);
+}
+.adoption-card {
+  position: relative;
+  overflow: hidden;
+  justify-items: center;
+  /* padding: 10%; */
+}
+
+.adoption-img {
+  margin-bottom: -15%;
+}
+
+.adoption-img img {
+  height: auto;
+  display: block;
+}
+
+.adoption-txt {
+  /* padding: 17% 0 0 40%; */
+  text-align: left;
+  line-height: 120%;
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/meow-adoption/bgcolor1.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  /* background: rgba(0, 0, 0, 0.6); */
+  /* color: #fff; */
+  justify-items: center;
+  transform: translateY(100%);
+  transition: transform 1s ease;
+  padding-top: 20px;
+}
+
+.adoption-txt h5 {
+  font-size: 1.3rem;
+  /* padding-left: 8%;
+  
+  margin-top: -20%; */
+  padding-bottom: 8px;
+}
+
+.adoption-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: none;
+}
+
+/* 表單容器：比遮罩高一層 */
+.adoption-form-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 2rem;
+  display: none;
+}
+
+.form-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1002;
+}
+
+.form-container {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 0;
+
+  margin-top: 20px;
+}
+
+.inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
+  font-size: 1rem;
+  width: 18%;
+  align-content: center;
+  padding-right: 5px;
+}
+
+.form-group {
+  display: flex;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group-yes {
+  display: flex;
+}
+
+.radio-group-yes label:last-child {
+  flex-grow: 1;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+#pet-name {
+  font-size: 12px;
+}
+#pet-type {
+  margin-top: 3px;
+}
+
+#rent-file {
+  margin-top: 3px;
+}
+
+.uploadStyle {
+  background-color: #e3e3e3;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirm {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #a59d84;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #998c6c;
+}
+
+.adopt-btn {
+  background-color: #a59d84;
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #e3b866;
+}
+
+@media screen and (max-width: 768px) {
+  .adoption-cardlist {
+    display: block;
+  }
+
+  .adoption-cardlist .adoption-card {
+    padding: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    height: 400px;
+  }
+
+  .adoption-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+

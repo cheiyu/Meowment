@@ -1,237 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Noto+Sans+TC:wght@100..900&display=swap"
+    rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Oooh Baby' rel='stylesheet'>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我要領養</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/banner footer.css">
-    <style>
-        .banner-background .title {
-            font-size: 2rem;
-            color: black;
-            word-spacing: 0.5rem;
-            position: absolute;
-            left: 45.5%;
-            top: 44%;
-        }
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/adoption.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-        .body-background {
-            position: relative;
-            padding: 5em 2em;
-            display: flex;
-            flex-direction: column;
-            gap: 5em;
-        }
-
-        .body-img img {
-            width: 100%;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-        }
-
-        .cat-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2em;
-        }
-
-        .cat-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .cat-img {
-            text-align: center;
-            max-width: 260px;
-        }
-
-        .cat-img img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            margin-bottom: 0.5em;
-        }
-
-        .cat-name {
-            font-weight: bold;
-            font-size: 1.1em;
-            line-height: 1.4;
-        }
-
-        .cat-name span {
-            display: block;
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        .cat-text {
-            background-color: #D9D9D9;
-            padding: 1.5em 2em;
-            border-radius: 30px;
-            max-width: 500px;
-            font-size: 15px;
-            line-height: 1.6;
-            position: relative;
-            text-align: justify;
-            opacity: 90%;
-        }
-
-
-        .cat-text::before {
-            content: "";
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background-color: #D9D9D9;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .cat-item:nth-child(odd) .cat-text::before {
-            left: -10px;
-        }
-
-        .cat-item:nth-child(even) .cat-text::before {
-            right: -10px;
-        }
-
-        /* RWD 手機直排 */
-        /* @media (max-width: 768px) {
-            .cat-item {
-                flex-direction: column !important;
-            }
-
-            .cat-text::before {
-                display: none;
-            }
-        } */
-
-
-
-
-    </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.svg" alt="logo">
-        </div></a>
-        <nav class="header-content" id="nav-menu">
-            <div class="header-button">
-                <span><a href="02-aboutUs.html">關於我們</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="06-news.html">最新消息</a></span>
-            </div>
-            <div class="header-button">
-                <span><a href="03-dish.html">餐點目錄</a></span>
-            </div>
 
-            <div class="header-button-dropdown">
-                <span class="dropdown-toggle">帶喵回家</span>
-                <ul class="dropdown-menu">
-                    <li><a href="04-1-meow-preparation.html">領養須知</a></li>
-                    <li><a href="04-2-meow-adoption.html">我要領養</a></li>
-                    <li><a href="04-3-meow-chart.html">領養表單</a></li>
+    <div class="layout">
+
+        <div class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html"><img src="img/banner-footer/logo.svg" alt="logo"></a>
+                </div>
+                <ul class="header-nav" id="nav-menu">
+                    <li class="header-btn active">
+                        <a href="02-aboutUs.html">關於我們</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="06-news.html">最新消息</a>
+                    </li>
+                    <li class="header-btn active">
+                        <a href="03-dish.html">餐點目錄</a>
+                    </li>
+
+                    <li class="header-btn toggle">
+                        <a href="#">帶喵回家</a>
+                        <ul>
+                            <li><a href="04-1-meow-preparation.html">領養須知</a></li>
+                            <li><a href="04-2-meow-adoption.html">我要領養</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="header-btn active"><a href="05-reservation.html">我要預約</a></li>
                 </ul>
-            </div>
-            <div class="header-button"><span><a href="05-reservation.html">我要預約</a></span></div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-        </nav>
-    </div>
-    <div class="banner-background">
+            </div>
+        </div>
+
+
+        <div class="banner-img-right">
+            <img src="img/banner-footer/banner-block-right.svg" alt="">
+        </div>
+
+
         <div class="banner-img">
-            <img src="img/banner_background.svg" alt="backgroundImg">
+            <img src="img/banner-footer/banner-block.png" alt="">
         </div>
-        <div class="title">
-            <span>我要領養</span>
+        <!-- <div class="title-container">
+            <div class="text-decoration">
+                <img src="img/banner-footer/title-colorblock.svg" alt="">
+            </div> -->
+        <div class="banner-title">
+            <h1>我要領養</h1>
+        </div>
+        <!-- </div>
+        </div> -->
+
+        <!-- <div class="body-background-img">
+            <img src="../img/banner-footer/body_background.svg" alt="">
+        </div> -->
+
+
+        <div class="section">
+
+            <div class="adoption-cardlist">
+
+                <div class="adoption-card" data-catname="炸蝦">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_shrimp.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>炸蝦</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            活潑小太陽<br>
+                            炸蝦<br>
+                            年齡:1歲<br>
+                            品種:米克斯<br>
+                            個性:活潑親人<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="蒲仔">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_puah.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>蒲仔</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            溫柔小紳士<br>
+                            年齡:2歲<br>
+                            性別:公<br>
+                            品種:米克斯(虎斑)<br>
+                            個性:文靜黏人<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="喵咪">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_meow.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>喵咪</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            優雅小公主<br>
+                            年齡:5歲<br>
+                            性別:母<br>
+                            品種:米克斯(玳瑁)<br>
+                            個性:貼心穩重<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="黑輪">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_olen.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>黑輪</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            慢熱小可愛<br>
+                            年齡:1歲<br>
+                            性別:公<br>
+                            品種:米克斯(虎斑)<br>
+                            個性:內向文靜<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+                <div class="adoption-card" data-catname="泰迪">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_wanlai.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>泰迪</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            成熟小型男<br>
+                            年齡:4歲<br>
+                            品種:加菲藍貓<br>
+                            個性:高冷聰明<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="小胖">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_chubby.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>小胖</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            活潑小太陽<br>
+                            年齡:3歲<br>
+                            品種:米克斯(三花)<br>
+                            個性:貪吃調皮<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="麻吉">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_machi.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>麻吉</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            高冷小紳士<br>
+                            年齡:5歲<br>
+                            性別:公<br>
+                            品種:美短<br>
+                            個性:聰明有個性<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="泡芙">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_puff.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>泡芙</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            撒嬌小公主<br>
+                            年齡:2歲<br>
+                            品種:布偶<br>
+                            性別:母<br>
+                            個性:療癒愛撒嬌<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+                </div>
+
+                <div class="adoption-card" data-catname="小花">
+                    <div class="adoption-img">
+                        <img src="/img/meow-adoption/cat_hua.svg" alt="">
+                    </div>
+                    <div class="adoption-txt">
+                        <h5>小花</h5>
+                        <p>
+                            <i class="fa-solid fa-hashtag"></i>
+                            黏人小王子<br>
+                            年齡:2歲<br>
+                            品種:布偶<br>
+                            個性:黏人愛撒嬌<br>
+                            <i class="fa-solid fa-check"></i>已結紮<br>
+                        </p>
+
+                        <button class="adopt-btn">我要領養</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ✅ Step 2: 領養表單 (預設隱藏) -->
+            <div class="adoption-overlay"></div>
+            <div class="adoption-form-wrapper" style="display: none;">
+                <button class="form-close">&times;</button>
+                <section class="form-container">
+                    <div class="inner-wrapper">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話</label>
+                            <input type="phone" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">電子郵件</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="catname">想領養的貓咪</label>
+                            <select id="catname">
+                                <option value="炸蝦">炸蝦</option>
+                                <option value="蒲仔">蒲仔</option>
+                                <option value="喵咪">喵咪</option>
+                                <option value="黑輪">黑輪</option>
+                                <option value="泰迪">泰迪</option>
+                                <option value="小胖">小胖</option>
+                                <option value="麻吉">麻吉</option>
+                                <option value="泡芙">泡芙</option>
+                                <option value="小花">小花</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                            <label>是否租屋</label>
+                            <div class="radio-group">
+                                <div class=" radio-group-yes">
+
+                                    <label><input type="radio" name="rent" value="是"> 是</label>
+                                    <label>附上房東同意書<input type="file" id="rent-file"></label>
+                                </div>
+                                <div class="radio-group-no">
+                                    <label><input type="radio" name="rent" value="否"> 否</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>家中環境照片</label>
+                            <input id="upload" type="file" required>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label>家中是否有其他寵物</label>
+
+                            <div class="radio-group">
+                                <div class=" radio-group-yes">
+
+                                    <label><input type="radio" name="pet" value="是"> 是</label>
+                                    <label id="pet-name">飼養物種<input type="text" id="pet-type"></label>
+                                </div>
+                                <div class="radio-group-no">
+                                    <label><input type="radio" name="pet" value="否"> 否</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p><input type="checkbox" id="read-rule"> 已詳閱<a href="04-1-meow-preparation.html"
+                                    target="_blank">領養須知</a></p>
+                        </div>
+                        <div class="confirm">
+                            <button type="submit" id="submit-btn">送出</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
         </div>
-    </div>
-    <div class="body-background">
-        <div class="body-img">
-            <img src="img/adoption_BG.svg" alt="cat background">
-        </div>
-
-
-        <div class="cat-item">
-            <div class="cat-img">
-                <img src="img/cat_shrimp.svg" alt="炸蝦" />
-                <div class="cat-name">炸蝦<br><span>#活潑小太陽</span></div>
-            </div>
-            <div class="cat-text">
-                炸蝦是一隻個性活潑、充滿好奇心的公橘貓，已完成結紮手術。牠總是以開朗的態度迎接每一位來訪的客人，用輕快的腳步和淘氣的眼神，融化所有人的心。無論是輕輕撒嬌，還是跳上跳下的玩耍時刻，炸蝦總能帶來滿滿的笑容與溫暖。如果你也渴望在生活中添上一抹陽光，或許，炸蝦就是那位等待你的人生夥伴。
-            </div>
-        </div>
-
-
-        <div class="cat-item">
-            <div class="cat-img">
-                <img src="img/cat_puah.svg" alt="蒲仔" />
-                <div class="cat-name">蒲仔<br><span>#溫柔小紳士</span></div>
-            </div>
-            <div class="cat-text">
-                蒲仔是一隻親人又溫和的公虎斑貓，已完成結紮手術。牠擁有柔順的毛色與靈動的眼睛，總是靜靜地靠近，輕輕用額頭蹭著你的手掌，傳遞屬於蒲仔的溫柔問候。無論是窩在窗邊曬太陽，還是依偎在你身旁打呼，蒲仔都用自己獨有的方式，讓每個相遇的人感受到被需要、被愛的幸福。如果你正尋找一位溫柔的陪伴者，蒲仔正在這裡，靜靜等著你的到來。
-            </div>
-        </div>
-
-
-
-        <div class="cat-item">
-            <div class="cat-img">
-                <img src="img/cat_meow.svg" alt="喵咪" />
-                <div class="cat-name">喵咪<br><span>#優雅小公主</span></div>
-            </div>
-            <div class="cat-text">
-                喵咪是一隻個性親人、溫柔體貼的母三花貓，已完成結紮手術。擁有獨特又迷人的三色毛皮，喵咪總是以優雅又親暱的方式靠近你，輕輕蹭蹭或靜靜地依偎在身邊。牠既喜歡撒嬌，也懂得安靜陪伴，像是一朵悄悄綻放的溫柔小花，療癒每一位靠近她的人。如果你正在尋找一位懂得細膩陪伴的夥伴，喵咪或許正是你的命定貓咪。
-            </div>
-        </div>
-
-
-
-        <div class="cat-item">
-            <div class="cat-img">
-                <img src="img/cat_olen.svg" alt="黑輪" />
-                <div class="cat-name">黑輪<br><span>#慢熱小可愛</span></div>
-            </div>
-            <div class="cat-text">
-                黑輪是一隻已結紮的母貓，毛色深沉柔順，眼神裡藏著一點警戒，也藏著一點溫柔。她個性膽小，需要時間觀察與適應新環境，但一旦熟悉後，就會默默地靠近你、陪著你，甚至躺在腳邊呼嚕。她不是第一眼就熱情的貓咪，但她的信任特別珍貴。只要你願意耐心陪伴，黑輪會用自己的方式，慢慢走進你心裡，成為生活中最安靜卻最穩定的存在。
-            </div>
-        </div>
-
     </div>
 
     <footer>
         <div class="footer-container">
             <div class="logo">
-                <img src="img/logo.svg" alt="logo">
+                <img src="img/banner-footer/logo.svg" alt="logo">
+                <div class="footer-copyright">
+                    <span> Copyright © 2025</span>
+                </div>
             </div>
+
             <div class="footer-txt">
                 <span>常見問題</span>
                 <span>聯絡我們</span>
                 <span>隱私權政策</span>
                 <span>使用者條款</span>
+                <div class="footer-icon">
+                    <i class="fa-brands fa-square-facebook fa-2x"></i>
+                    <i class="fa-brands fa-square-instagram fa-2x"></i>
+                    <i class="fa-brands fa-line fa-2x"></i>
+                </div>
             </div>
-            <div class="footer-icon">
-
-            </div>
-            <div class="footer-copyright">
-                <span> Copyright © 2025</span>
-            </div>
-
         </div>
-
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/javascript/adoption.js"></script>
 </body>
 
 </html>

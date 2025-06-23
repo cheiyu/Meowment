@@ -1,0 +1,725 @@
+.layout-index{
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #f1f0e8;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+ 
+}
+
+.layout-imdex section{
+  flex:1;
+  
+}
+
+.header-background {
+  width: 100%;
+  height: auto;
+  /* overflow: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.header-background-img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-background-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.header-background .slogan {
+  font-size: 1rem;
+  font-family: "Oooh Baby";
+  color: white;
+  word-spacing: 0.5rem;
+  position: absolute;
+  left: 55%;
+  max-width: 50%;
+  text-align: center;
+  top: 37%;
+}
+
+.hamburger {
+  width: 30px;
+  height: 5px;
+  display: none;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: black;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  /* padding-top: 5%;
+  padding-left: 5%; */
+}
+
+.word-block1,
+.word-block2,
+.word-block3,
+.word-block4 {
+  width: 100%;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 1rem;
+  z-index: 0;
+  background-position: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .word-block1,
+  .word-block2,
+  .word-block3,
+  .word-block4 {
+    justify-self: center;
+  }
+}
+
+.word-block1 {
+  background-image: url(../img/Index/block1.svg);
+  margin-bottom: -3%;
+}
+
+.word-block2 {
+  background-image: url(../img/Index/block2.svg);
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.word-block3 {
+  background-image: url(../img/Index/block3.svg);
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.word-block4 {
+  background-image: url(../img/Index/block4.svg);
+}
+
+@media screen and (max-width: 767px) {
+  .word-block1,
+  .word-block2,
+  .word-block3,
+  .word-block4 {
+    height: 50px;
+    justify-self: center;
+  }
+  .word-block1 {
+    margin-top: -5%;
+    margin-bottom:-15%
+  }
+
+   .word-block2 {
+    margin-top: 10%;
+    margin-bottom:-15%
+  }
+  .header-background .slogan {
+    font-size: 0.5rem;
+}
+}
+
+.best-dishes {
+  /* padding-bottom: 12em; */
+  justify-items: center;
+}
+
+.container-dishes {
+  margin-top: 25%;
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  justify-items: center;
+}
+
+.dish-cardlist {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.dish-card {
+  justify-items: center;
+  position: relative;
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 5px;
+}
+
+
+.dish-img {
+  object-fit: contain;
+}
+
+.dish-img img {
+  display: block;
+  margin: 0 auto;
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  transform: translate(0, 50%);
+}
+
+.dish-cardlist .dish-card:nth-child(odd) .dish-txt {
+  background-color: #e5e1da;
+}
+
+.dish-cardlist .dish-card:nth-child(even) .dish-txt {
+  background-color: #b3c8cf;
+}
+
+.dish-txt {
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  /* max-width: 220px; */
+  width: 100%;
+  height: 250px;
+  /* position: absolute; */
+  /* top: 80%;
+  left: 50%; */
+  /* transform: translate(-50%, -20%); */
+  background: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+  padding-top: 18%;
+  line-height: 20px;
+}
+
+.dish-txt h3 {
+  font-size: 16px;
+  /* margin: 4.5em 0 0 0; */
+}
+
+.dish-txt h4 {
+  font-size: 12px;
+  /* margin-top: 0.6em; */
+}
+
+.dish-txt p {
+  font-size: 12px;
+  /* text-align: justify; */
+  /* margin: 0.8em 2em 0; */
+  line-height: 22px;
+  padding: 10px;
+}
+
+.decoration01 {
+  height: auto;
+  width: 40%;
+  position: absolute;
+  right: -20%;
+  top: 20%;
+  z-index: -5;
+}
+
+.decoration01 img {
+  width: 70%;
+}
+.decoration02 {
+  height: auto;
+  width: 50%;
+  position: absolute;
+  right: -30%;
+  bottom: 5.5%;
+  z-index: -5;
+}
+.decoration02 img {
+  width: 50%;
+}
+
+.decoration03 {
+  height: auto;
+  width: 50%;
+  position: absolute;
+  left: -10%;
+  bottom: 50%;
+  z-index: -5;
+}
+.decoration03 img {
+  width: 50%;
+  position: absolute;
+  left: 0;
+}
+#meow-home {
+  justify-items: center;
+}
+.meow-cardlist {
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: baseline;
+}
+
+.meow-card {
+  width: 220px;
+}
+
+.meow-img {
+  height: auto;
+  align-content: center;
+  justify-content: center;
+  width: 220px;
+  height: 300px;
+}
+
+.meow-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.meow-img:hover img {
+  transform: scale(1.1);
+  animation: swing 1s infinite ease-in-out;
+}
+@keyframes swing {
+  0%,
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+}
+
+.meow-txt {
+  display: flex;
+  justify-content: center;
+}
+
+.meow-txt h3 {
+  text-decoration: underline 2px dashed;
+  text-underline-offset: 4px;
+  position: relative;
+}
+
+/* @media only screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+} */
+
+.news-cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 0.5em 0;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5em;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.news-txtcontainer {
+  width: 100%;
+  background-color: #d9d9d9;
+  max-width: 900px;
+  margin: 5% auto;
+  padding: 1em 1.5em;
+  border-radius: 30px;
+  position: relative;
+}
+
+.news-txt {
+  border-bottom: 1px solid #333;
+  padding: 1.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.news-txt span {
+  display: inline-block;
+}
+
+.news-date {
+  width: 15%;
+  text-align: left;
+}
+
+.news-category {
+  width: 15%;
+  text-align: left;
+  color: #a55c2a;
+  font-weight: bold;
+}
+
+.news-category-title {
+  flex: 1;
+  text-align: left;
+}
+.more-btn {
+  font-size: 14px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.more-btn a {
+  color: #333;
+  position: relative;
+  text-decoration: none;
+  text-align: right;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: -1% 0 -3% 0;
+  width: 80px;
+}
+
+.more-btn a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #bad4ed;
+  transition: 0.4s 0.2s;
+}
+.more-btn a:hover::after {
+  width: 5%;
+}
+
+@media (max-width: 1023px) {
+  .meow-cardlist {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: baseline;
+  }
+
+  .meow-img {
+    height: auto;
+    align-content: center;
+    justify-content: center;
+    width: 230px;
+    height: 300px;
+  }
+
+  .meow-img img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .meow-cardlist {
+    display: none;
+  }
+
+  .meow-carousel {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carousel-wrapper-meow {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-wrapper-meow .carousel-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .carousel-wrapper-meow .carousel-slide.active {
+    display: flex;
+  }
+
+  .carousel-wrapper-meow .meow-img img {
+    width: 100%;
+    height: 250px;
+       border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    
+  }
+
+  .carousel-wrapper-meow .meow-txt {
+    padding: 20px;
+    background: #d9d9d9;
+    width: 90%;
+    max-width: 80px;
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 5px;
+    align-items: center;
+  }
+
+  .carousel-btn {
+    background-color: rgba(179, 200, 207, 0.7);
+    color: #fff;
+    border: none;
+    padding: 5px 13px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+    outline: none;
+    pointer-events: all;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+
+  #prevMeow {
+    left: 0;
+  }
+
+  #nextMeow {
+    right: 0;
+  }
+
+  .carousel-btn:hover {
+    background-color: #8fa7b2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-txt {
+    font-size: 10px;
+    padding: 0.8em 0;
+  }
+  .more-btn {
+    font-size: 10px;
+    top: 0;
+    right: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .dish-card {
+    margin-top: -10%;
+    padding-right: -5%;
+    gap: 0;
+    max-width: 320px;
+  }
+
+  .dish-cardlist {
+    display: flex;
+    justify-self: center;
+    max-width: 1000px;
+    width: 100%;
+    
+  }
+  .dish-txt{
+   width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .dish-cardlist {
+    display: none;
+  }
+
+  /* 顯示行動版輪播容器 */
+
+  /* mobile-carousel 顯示並作為容器 */
+  .mobile-carousel {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    display: none; /* 由 JS 控制 active 顯示 */
+    flex-direction: column; /* 內部元素垂直排列 */
+    align-items: center; /* 水平置中內容 */
+    justify-items: center;
+    position: relative; /* <-- 核心：讓它成為圖片、文字、按鈕的定位參考點 */
+    z-index: 1; /* 確保內容卡片在正常層級 */
+    transform: none !important; /* 清除所有可能導致偏移的 transform */
+  }
+
+  .carousel-slide.active {
+    display: flex;
+  }
+
+  /* 針對輪播內的圖片容器 (dish-img) */
+  .carousel-slide .dish-img {
+    /* 這個容器本身不需要 margin-bottom */
+    margin-bottom: 0;
+    object-fit: contain;
+    transform: none !important;
+    position: relative; /* <-- 重要：讓圖片可以設定 z-index */
+    z-index: 3; /* <-- 確保圖片在文字區塊 (dish-txt) 上方 */
+    top: 66px; /* 確保圖片不因任何預設值而偏移 */
+    left: 0;
+  }
+
+  /* 針對輪播內的圖片 (dish-img img) */
+  .carousel-slide .dish-img img {
+    width: 150px; /* 圖片大小 */
+    height: 150px;
+    border-radius: 50%;
+    transform: none !important;
+    position: static !important;
+    margin: 0 auto; /* 水平置中 */
+    display: block;
+  }
+
+  /* 針對輪播內的文字區塊 (dish-txt) */
+  .carousel-slide .dish-txt {
+    width: 90%;
+    max-width: 300px; /* 根據圖片大小和內容調整這個最大寬度 */
+    height: auto;
+    /* <-- 核心：透過 padding-top 製造與圖片的重疊效果 */
+    /* padding-top = 圖片高度一半 + 額外間距 */
+    padding: 70px 20px 20px 20px; /* 150px/2 = 75px，加上下方文字留出 20px */
+    line-height: 1.2;
+    background: #e5e1da;
+    position: relative; /* <-- 核心：確保它能設定 z-index */
+    z-index: 2; /* <-- 確保文字區塊在圖片下方，但在按鈕下方 */
+    top: 0;
+    left: 0;
+    transform: none !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 190px;
+  }
+
+  .carousel-slide .dish-txt h3 {
+    font-size: 14px;
+    margin-top: 0.5em;
+  }
+
+  .carousel-slide .dish-txt h4 {
+    font-size: 12px;
+    margin-top: 0.1em;
+  }
+
+  .carousel-slide .dish-txt p {
+    font-size: 10px;
+    text-align: center;
+    margin: auto;
+    max-width: 250px;
+  }
+
+  /* 按鈕本身的樣式 - 絕對定位在 carousel-slide 上 */
+  .carousel-btn {
+    background-color: rgba(179, 200, 207, 0.7);
+    color: #fff;
+    border: none;
+    padding: 5px 13px;
+    cursor: pointer;
+    border-radius: 50%; /* 圓形按鈕 */
+    font-size: 1.5em;
+    outline: none;
+    pointer-events: all; /* 確保可點擊 */
+    width: 40px; /* 固定寬度 */
+    height: 40px; /* 固定高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin: 0; /* 清除所有 margin */
+    position: absolute; /* <-- 絕對定位 */
+    top: 65%; /* <-- 垂直置中 */
+    /* <-- 調整垂直偏移 */
+    z-index: 100; /* <-- 確保在最上層，比圖片和文字都高 */
+  }
+
+  /* 定位「上一頁」按鈕 */
+  #prevMobile {
+    /* 左按鈕應該在左邊，距離卡片左緣固定距離 */
+    left: 15px; /* <-- 距離左側固定 5px */
+  }
+
+  /* 定位「下一頁」按鈕 */
+  #nextMobile {
+    /* 右按鈕應該在右邊，距離卡片右緣固定距離 */
+    right: 15px; /* <-- 距離右側固定 5px */
+  }
+
+  .carousel-btn:hover {
+    background-color: #8fa7b2;
+  }
+}
