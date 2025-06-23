@@ -583,9 +583,7 @@
     display: none;
   }
 
-  /* 顯示行動版輪播容器 */
-
-  /* mobile-carousel 顯示並作為容器 */
+  
   .mobile-carousel {
     display: block;
     text-align: center;
@@ -607,32 +605,31 @@
     flex: 0 0 100%;
     box-sizing: border-box;
     padding: 20px 0;
-    display: none; /* 由 JS 控制 active 顯示 */
-    flex-direction: column; /* 內部元素垂直排列 */
-    align-items: center; /* 水平置中內容 */
+    display: none; 
+    flex-direction: column; 
+    align-items: center; 
     justify-items: center;
-    position: relative; /* <-- 核心：讓它成為圖片、文字、按鈕的定位參考點 */
-    z-index: 1; /* 確保內容卡片在正常層級 */
-    transform: none !important; /* 清除所有可能導致偏移的 transform */
+    position: relative; 
+    z-index: 1; 
+    transform: none !important; 
   }
 
   .carousel-slide.active {
     display: flex;
   }
 
-  /* 針對輪播內的圖片容器 (dish-img) */
+  
   .carousel-slide .dish-img {
-    /* 這個容器本身不需要 margin-bottom */
+    
     margin-bottom: 0;
     object-fit: contain;
     transform: none !important;
-    position: relative; /* <-- 重要：讓圖片可以設定 z-index */
-    z-index: 3; /* <-- 確保圖片在文字區塊 (dish-txt) 上方 */
-    top: 66px; /* 確保圖片不因任何預設值而偏移 */
+    position: relative; 
+    z-index: 3; 
+    top: 66px; 
     left: 0;
   }
 
-  /* 針對輪播內的圖片 (dish-img img) */
   .carousel-slide .dish-img img {
     width: 150px; /* 圖片大小 */
     height: 150px;
@@ -643,18 +640,16 @@
     display: block;
   }
 
-  /* 針對輪播內的文字區塊 (dish-txt) */
+  
   .carousel-slide .dish-txt {
     width: 90%;
-    max-width: 300px; /* 根據圖片大小和內容調整這個最大寬度 */
+    max-width: 300px; 
     height: auto;
-    /* <-- 核心：透過 padding-top 製造與圖片的重疊效果 */
-    /* padding-top = 圖片高度一半 + 額外間距 */
-    padding: 70px 20px 20px 20px; /* 150px/2 = 75px，加上下方文字留出 20px */
+    padding: 70px 20px 20px 20px; 
     line-height: 1.2;
     background: #e5e1da;
-    position: relative; /* <-- 核心：確保它能設定 z-index */
-    z-index: 2; /* <-- 確保文字區塊在圖片下方，但在按鈕下方 */
+    position: relative; 
+    z-index: 2; 
     top: 0;
     left: 0;
     transform: none !important;

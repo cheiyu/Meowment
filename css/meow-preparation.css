@@ -1,4 +1,4 @@
-section{
+section {
   margin-top: 10%;
 }
 
@@ -12,17 +12,17 @@ section{
   background-position: left;
   /* padding-left: 7%; */
   color: white;
-  place-items: center;
-  align-content: center;
-  
+  /* place-items: center;
+  align-content: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .word-block1 {
   background-image: url(../img/Index/block1.svg);
- 
 }
-h2 {
-}
+
 .section-head {
   display: flex;
   align-items: baseline;
@@ -73,9 +73,6 @@ h2 {
   margin: -30px 0 50px 40px;
 }
 
- 
- 
-
 .step-progress .dot {
   width: 100px;
   height: 12px;
@@ -88,7 +85,7 @@ h2 {
   background: #89a8b2;
 }
 
-.progress{
+.progress {
   position: relative;
 }
 
@@ -145,7 +142,7 @@ h2 {
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
@@ -212,11 +209,27 @@ h2 {
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 5;
-  
 }
 
 .item.cat img {
   width: 100%;
+  border-radius: 20px;
+}
+
+.care-card{
+  border-radius: 20px;
+  background-color: #b3c8cf;
+}
+
+.care-card:nth-child(even){
+
+  background-color: #e5e1da;
+}
+
+.care-card p{
+  font-size: 10px;
+  transform: translateY(-8px);
+
 }
 
 @keyframes bubbleIn {
@@ -276,16 +289,10 @@ h2 {
   justify-self: center;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-  .word-block1{
   
-  }
   .item[class*="box"] {
     font-size: 8px;
-
   }
 
   [class^="word-block"] {
@@ -296,13 +303,14 @@ h2 {
   [class^="word-block"] h2 {
     font-size: 10px;
   }
-.intro-text {
-  font-size: 12px;
-}
+  .intro-text {
+    font-size: 12px;
+  }
   .care-list {
     grid-template-columns: repeat(2, 1fr);
-
     justify-self: center;
+    
+    justify-content: center;
   }
 
   .care-list img {
@@ -330,7 +338,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* 半透明遮罩 */
+  background-color: rgba(0, 0, 0, 0.4); 
   color: white;
   display: flex;
   justify-content: center;
@@ -341,49 +349,49 @@ h2 {
 }
 
 .photo-item:hover img {
-  transform: scale(1.05); /* 小小放大 */
+  transform: scale(1.05); 
 }
 
 .photo-item:hover .overlay-txt {
-  opacity: 1; /* 滑入時出現遮罩 */
+  opacity: 1; 
 }
 
-
-.care-img{
+.care-img {
   object-fit: cover;
   width: 200px;
   height: 150px;
+  align-content: center;
 }
 
-.care-img img{
-  width: 100%;
-  height: 100%;
+.care-img img {
+  width: 80%;
+  height: 80%;
 }
 
 @media screen and (max-width: 768px) {
-
   .step-progress {
-  display: flex;
-  margin: auto;
+    display: flex;
+    margin: auto;
   }
 
-.step-card.active h3{
+  .step-card.active h3 {
     font-size: 12px;
-
   }
 
-  .step-card.active p{
+  .step-card.active p {
     font-size: 12px;
-
   }
-   .arrow.right, .arrow.left {
+  .arrow.right,
+  .arrow.left {
     width: 25px;
     height: 25px;
-}
-.fa-2xl {
-        font-size: 1.25em; 
-    }
-    .step-card.active{
-      margin-top: 15px;
-    }
+  }
+  .fa-2xl {
+    font-size: 1.25em;
+  }
+  .step-card.active {
+    margin-top: 15px;
+  }
+
+ 
 }

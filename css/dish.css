@@ -55,7 +55,9 @@
   margin: 0 auto;
   padding: 0 1em;
 }
-
+.dish-conotainer{
+    margin-top: 10px;
+}
 .item-text {
   flex: 1;
   font-size: 16px;

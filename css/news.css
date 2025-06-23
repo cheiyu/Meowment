@@ -77,17 +77,13 @@ section {
 }
 
 @media (max-width: 767px) {
-  .category-nav{
-
-  }
+  
   .category-nav button {
   font-size: 10px;
   
   }
 
-  .data-category{
-
-  }
+  
   .news-list {
     width: 100%;
     display: flex;
@@ -105,6 +101,8 @@ section {
 
   .news-img {
     width: 100%;
+    max-width: 100%;
+    height: 130px;
     
   }
 
