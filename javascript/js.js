@@ -169,71 +169,71 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //關於我們對話框
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const dias = document.querySelectorAll(".dia");
+document.addEventListener("DOMContentLoaded", function () {
+  const dias = document.querySelectorAll(".dia");
 
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           const target = entry.target;
-//           const index = [...dias].indexOf(target); // 找出第幾個 .dia
-//           setTimeout(() => {
-//             target.classList.add("show");
-//           }, index * 300); // 每個延遲 0.3 秒依序出現
-//           observer.unobserve(target); // 出現後不再觀察
-//         }
-//       });
-//     },
-//     {
-//       threshold: 0.2,
-//     }
-//   );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const index = [...dias].indexOf(target); // 找出第幾個 .dia
+          setTimeout(() => {
+            target.classList.add("show");
+          }, index * 300); // 每個延遲 0.3 秒依序出現
+          observer.unobserve(target); // 出現後不再觀察
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
 
-//   dias.forEach((dia) => {
-//     observer.observe(dia);
-//   });
-// });
+  dias.forEach((dia) => {
+    observer.observe(dia);
+  });
+});
 
 //領養流程按鈕切換
-// let currentStep = 0;
-// let cards = document.querySelectorAll(".step-card");
-// let dots = document.querySelectorAll(".dot");
-// let prevBtn = document.getElementById("pre-btn");
-// let nextBtn = document.getElementById("next-btn");
+let currentStep = 0;
+let cards = document.querySelectorAll(".step-card");
+let dots = document.querySelectorAll(".dot");
+let prevBtn = document.getElementById("pre-btn");
+let nextBtn = document.getElementById("next-btn");
 
-// function stepProgress() {
-//   cards.forEach((card, index) => {
-//     card.classList.toggle("active", index === currentStep);
-//   });
-//   dots.forEach((dot, index) => {
-//     dot.classList.toggle("active", index === currentStep);
-//   });
+function stepProgress() {
+  cards.forEach((card, index) => {
+    card.classList.toggle("active", index === currentStep);
+  });
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentStep);
+  });
 
-//   prevBtn.disabled = currentStep === 0;
-//   nextBtn.disabled = currentStep === cards.length - 1;
-// }
-// prevBtn.addEventListener("click", () => {
-//   if (currentStep > 0) {
-//     currentStep--;
-//     stepProgress();
-//   }
-// });
-// nextBtn.addEventListener("click", () => {
-//   if (currentStep < cards.length - 1) {
-//     currentStep++;
-//     stepProgress();
-//   }
-// });
+  prevBtn.disabled = currentStep === 0;
+  nextBtn.disabled = currentStep === cards.length - 1;
+}
+prevBtn.addEventListener("click", () => {
+  if (currentStep > 0) {
+    currentStep--;
+    stepProgress();
+  }
+});
+nextBtn.addEventListener("click", () => {
+  if (currentStep < cards.length - 1) {
+    currentStep++;
+    stepProgress();
+  }
+});
 
-// dots.forEach((dot, index) => {
-//   dot.addEventListener("click", () => {
-//     currentStep = index;
-//     stepProgress();
-//   });
-// });
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    currentStep = index;
+    stepProgress();
+  });
+});
 
-// stepProgress();
+stepProgress();
 
 //必備物資 貓咪物品
 
