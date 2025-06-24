@@ -44,7 +44,7 @@ function renderCalendar(containerId) {
 
   const weekdays = document.createElement("div");
   weekdays.className = "calendar-weekdays";
-  weekdays.textContent = "日 一 二 三 四 五 六";
+  weekdays.textContent = "日  一  二  三  四  五  六";
 
   const grid = document.createElement("div");
   grid.className = "calendar-grid";

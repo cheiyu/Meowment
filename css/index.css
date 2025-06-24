@@ -90,7 +90,7 @@
   align-content: center;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .word-block1,
   .word-block2,
   .word-block3,
@@ -213,6 +213,7 @@
 }
 
 .dish-txt h3 {
+  margin-top: 3px;
   font-size: 16px;
   /* margin: 4.5em 0 0 0; */
 }
@@ -324,7 +325,7 @@
   position: relative;
 }
 
-/* @media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 767px) {
   .hamburger {
     display: flex;
   }
@@ -427,7 +428,7 @@
   width: 5%;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .meow-cardlist {
     max-width: 600px;
     width: 100%;
@@ -452,7 +453,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .meow-cardlist {
     display: none;
   }
@@ -547,7 +548,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .news-txt {
     font-size: 10px;
     padding: 0.8em 0;
@@ -558,7 +559,7 @@
     right: 0;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .dish-card {
     margin-top: -10%;
     padding-right: -5%;
@@ -574,6 +575,7 @@
     
   }
   .dish-txt{
+   
    width: 100%;
   }
 }

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".header-nav li.toggle > a").forEach((item) => {
     item.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 767) {
         e.preventDefault();
 
         item.parentElement.classList.toggle("open");

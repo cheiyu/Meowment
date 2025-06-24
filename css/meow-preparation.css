@@ -289,7 +289,7 @@ section {
   justify-self: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   
   .item[class*="box"] {
     font-size: 8px;
@@ -368,7 +368,7 @@ section {
   height: 80%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .step-progress {
     display: flex;
     margin: auto;

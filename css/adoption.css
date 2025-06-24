@@ -75,7 +75,7 @@
   display: none;
 }
 
-/* 表單容器：比遮罩高一層 */
+
 .adoption-form-wrapper {
   position: fixed;
   top: 50%;
@@ -223,7 +223,7 @@ button[type="submit"]:hover {
   background-color: #e3b866;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .adoption-cardlist {
     display: block;
   }

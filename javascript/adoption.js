@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let isSlickInit = false;
 
   function toggleSlickByScreen() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 767) {
       if (!isSlickInit) {
         $cardlist.slick({
           slidesToShow: 1,

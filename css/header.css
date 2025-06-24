@@ -219,7 +219,7 @@ ul.header-nav li:hover > ul {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .banner-title {
 
     height: 50px;
@@ -234,7 +234,7 @@ ul.header-nav li:hover > ul {
 }
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
 
    
     .hamburger {
