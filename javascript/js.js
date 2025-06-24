@@ -177,11 +177,12 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const target = entry.target;
-          const index = [...dias].indexOf(target); // 找出第幾個 .dia
+          const index = [...dias].indexOf(target); 
+
           setTimeout(() => {
             target.classList.add("show");
-          }, index * 300); // 每個延遲 0.3 秒依序出現
-          observer.unobserve(target); // 出現後不再觀察
+          }, index * 300); 
+          observer.unobserve(target); 
         }
       });
     },
