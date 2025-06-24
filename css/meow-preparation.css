@@ -366,6 +366,7 @@ section {
 .care-img img {
   width: 80%;
   height: 80%;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 767px) {
