@@ -196,6 +196,7 @@
 }
 
 .dish-txt {
+  border-radius: 20px;
   align-content: center;
   text-align: center;
   justify-content: center;
